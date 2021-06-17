@@ -5,7 +5,6 @@
 String YourSolver::get(String boardString)
 {
 	Board board(boardString);
-	String b = board.toString();
-	std::wcout << b;
+	std::wcout << board.toString();
 	return L"ACT";
 }

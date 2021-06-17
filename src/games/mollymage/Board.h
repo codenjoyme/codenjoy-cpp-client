@@ -8,17 +8,17 @@ public:
 
 	String toString() const;
 
-	Point getBomberman() const;
-	PointList getOtherBombermans() const;
-	bool isMyBombermanDead() const;
+	Point getHero() const;
+	PointList getOtherHeroes() const;
+	bool isMyHeroDead() const;
 
 	PointList getBarriers() const;
 
-	PointList getMeatChoppers() const;
+	PointList getGhosts() const;
 
 	PointList getWalls() const;
-	PointList getDestoyWalls() const;
-	PointList getBombs() const;
+	PointList getTreasureBoxes() const;
+	PointList getPotions() const;
 	PointList getBlasts() const;
 
 	PointList getFutureBlasts() const;

@@ -63,16 +63,16 @@ DirectionMap Direction::initialise() {
 	DirectionMap mapOfDirections;
 	mapOfDirections[LL("NULL")] = DirectionVector(-1, 0, 0);
 
-	// direction of Bomberman
+	// direction of Molly
 	mapOfDirections[LL("UP")] = DirectionVector(2, 0, -1);
 	mapOfDirections[LL("DOWN")] = DirectionVector(3, 0, 1);
 	mapOfDirections[LL("LEFT")] = DirectionVector(0, -1, 0);
 	mapOfDirections[LL("RIGHT")] = DirectionVector(1, 1, 0);
 
-	// drop a bomb
+	// drop a potion
 	mapOfDirections[LL("ACT")] = DirectionVector(4, 0, 0);
 
-	// stop the Bomberman
+	// stop the Molly
 	mapOfDirections[LL("STOP")] = DirectionVector(5, 0, 0);
 	return mapOfDirections;
 }

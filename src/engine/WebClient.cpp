@@ -68,7 +68,7 @@ void WebClient::onMessage(Client* c, websocketpp::connection_hdl hdl, message_pt
 
 		WideCharToMultiByte(CP_UTF8, 0, &answer[0], answer.length(),
 			&utf_answer[0], utf_answer.capacity(), NULL, NULL);
-		if (utf_answer == "") { // This happens if bomberman's still dead
+		if (utf_answer == "") { // This happens if molly's still dead
 			if (answer != LL("")) {
 				throw std::runtime_error("WebClient::onMessage(...): Conversion from Char to utf8 error!");
 			}
