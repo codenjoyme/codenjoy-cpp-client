@@ -33,7 +33,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\engine;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\games;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\games\bomberman;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\test</IncludePath>
+    <IncludePath>C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\engine;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\games;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\src\games\mollymage;C:\Users\Roman_Kulyniak\Projects\codenjoy-cpp-client\test</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -41,7 +41,7 @@
   <ItemGroup>
     <ClCompile Include="engine\DirectionTest.cpp" />
     <ClCompile Include="engine\PointTest.cpp" />
-    <ClCompile Include="games\bomberman\BoardTest.cpp" />
+    <ClCompile Include="games\mollymage\BoardTest.cpp" />
     <ClCompile Include="engine\LengthToXYTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

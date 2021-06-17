@@ -36,13 +36,13 @@
     <ClCompile Include="engine\WebClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="games\bomberman\Board.cpp">
+    <ClCompile Include="games\mollymage\Board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="games\bomberman\Element.cpp">
+    <ClCompile Include="games\mollymage\Element.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="games\bomberman\YourSolver.cpp">
+    <ClCompile Include="games\mollymage\YourSolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,13 +77,13 @@
     <ClInclude Include="engine\WebClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="games\bomberman\Board.h">
+    <ClInclude Include="games\mollymage\Board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="games\bomberman\Element.h">
+    <ClInclude Include="games\mollymage\Element.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="games\bomberman\YourSolver.h">
+    <ClInclude Include="games\mollymage\YourSolver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
