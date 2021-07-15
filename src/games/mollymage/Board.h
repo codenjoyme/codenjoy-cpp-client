@@ -10,6 +10,7 @@ public:
 
 	Point getHero() const;
 	PointList getOtherHeroes() const;
+	PointList getEnemyHeroes() const;
 	bool isMyHeroDead() const;
 
 	PointList getBarriers() const;

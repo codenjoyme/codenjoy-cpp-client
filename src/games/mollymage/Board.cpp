@@ -13,6 +13,7 @@ String Board::toString() const {
 	ss << LL("Board:\n") << AbstractBoard::boardAsString() << LL("\n")
 		<< LL("Hero at: ") << getHero().toString() << LL("\n")
 		<< LL("Other Heroes at: ") << pointListToString(getOtherHeroes()) << LL("\n")
+		<< LL("Enemy Heroes at: ") << pointListToString(getEnemyHeroes()) << LL("\n")
 		<< LL("Ghosts at: ") << pointListToString(getGhosts()) << LL("\n")
 		<< LL("Treasure Boxes at : ") << pointListToString(getTreasureBoxes()) << LL("\n")
 		<< LL("Potions at: ") << pointListToString(getPotions()) << LL("\n")
@@ -41,6 +42,14 @@ PointList Board::getOtherHeroes() const {
 	return rslt;
 }
 
+PointList Board::getEnemyHeroes() const {
+	PointList rslt;
+	rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO"))));
+	rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
+	rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_DEAD_HERO"))));
+	return rslt;
+}
+
 bool Board::isMyHeroDead() const {
 	return board.find(Element(LL("DEAD_HERO")).getChar()) != String::npos;
 }
@@ -51,6 +60,7 @@ PointList Board::getBarriers() const {
 	rslt.splice(rslt.end(), getPotions());
 	rslt.splice(rslt.end(), getTreasureBoxes());
 	rslt.splice(rslt.end(), getOtherHeroes());
+	rslt.splice(rslt.end(), getEnemyHeroes());
 	return removeDuplicates(rslt);
 }
 
@@ -74,6 +84,8 @@ PointList Board::getPotions() const {
 	rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_4"))));
 	rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_5"))));
 	rslt.splice(rslt.end(), findAll(new Element(LL("POTION_HERO"))));
+	rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
+	rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
 	return rslt;
 }
 
@@ -84,6 +96,7 @@ PointList Board::getBlasts() const {
 PointList Board::getFutureBlasts() const {
 	PointList potions = getPotions();
 	potions.splice(potions.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
+	potions.splice(potions.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
 	potions.splice(potions.end(), findAll(new Element(LL("POTION_HERO"))));
 
 	PointList rslt;
