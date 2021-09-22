@@ -35,6 +35,8 @@ Point Board::getHero() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIPE_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_DIE"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIT_RIGHT"))));
 
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_RIGHT"))));
@@ -46,6 +48,8 @@ Point Board::getHero() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIPE_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_DIE"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIT_RIGHT"))));
 	return rslt.front();
 }
 
@@ -61,8 +65,10 @@ PointList Board::getOtherHeroes() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_FALL_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_DIE"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_RIGHT"))));
 
+    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_DIE"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_CRACK_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_CRACK_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_LADDER"))));
@@ -72,6 +78,8 @@ PointList Board::getOtherHeroes() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_FALL_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIPE_RIGHT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_RIGHT"))));
 	return rslt;
 }
 
@@ -87,8 +95,10 @@ PointList Board::getEnemyHeroes() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_FALL_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_DIE"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIT_RIGHT"))));
 
+    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_DIE"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_CRACK_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_CRACK_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_LADDER"))));
@@ -98,6 +108,8 @@ PointList Board::getEnemyHeroes() const {
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_FALL_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIPE_RIGHT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIT_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIT_RIGHT"))));
 	return rslt;
 }
 
@@ -106,6 +118,8 @@ PointList Board::getRobbers() const {
 	rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_LADDER"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_RIGHT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_FALL_LEFT"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_FALL_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIPE_LEFT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIPE_RIGHT"))));
     rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIT_LEFT"))));
