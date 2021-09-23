@@ -16,6 +16,7 @@ String Board::toString() const {
 		<< LL("Enemy Heroes at: ") << pointListToString(getEnemyHeroes()) << LL("\n")
 		<< LL("Robbers at: ") << pointListToString(getRobbers()) << LL("\n")
 		<< LL("Mask potions at: ") << pointListToString(getPotions()) << LL("\n");
+		<< LL("Keys at: ") << pointListToString(getKeys()) << LL("\n");
 	return ss.str();
 }
 
@@ -177,5 +178,24 @@ PointList Board::getBackways() const {
 PointList Board::getPotions() const {
 	PointList rslt;
     rslt.splice(rslt.end(), findAll(new Element(LL("MASK_POTION"))));
+	return rslt;
+}
+
+PointList Board::getDoors() const {
+	PointList rslt;
+    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_GOLD"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_SILVER"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_BRONZE"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_GOLD"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_SILVER"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_BRONZE"))));
+	return rslt;
+}
+
+PointList Board::getKeys() const {
+	PointList rslt;
+    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_GOLD"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_SILVER"))));
+    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_BRONZE"))));
 	return rslt;
 }

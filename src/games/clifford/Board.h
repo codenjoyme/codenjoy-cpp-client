@@ -21,6 +21,8 @@ public:
 	PointList getClues() const;
 	PointList getBackways() const;
 	PointList getPotions() const;
+	PointList getDoors() const;
+	PointList getKeys() const;
 
 protected:
 	virtual CharElement* valueOf(Char ch) const override;
