@@ -1,7 +1,7 @@
 #include <iostream>
 #include "engine/RandomDice.h"
 
-#include "games/mollymage/YourSolver.h"
+#include "games/clifford/YourSolver.h"
 
 /////////////////////////////////////////////
 // Paste a proper name e.g. "0&code=000000000000";
