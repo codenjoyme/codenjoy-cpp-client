@@ -6,7 +6,7 @@ This package incorporates components from the projects listed below. Microsoft l
 
 
 
-1.	Google Test Framework (https://github.com/google/googletest)
+1.    Google Test Framework (https://github.com/google/googletest)
 
 
 %% Google Test Framework NOTICES, INFORMATION, AND LICENSE BEGIN HERE

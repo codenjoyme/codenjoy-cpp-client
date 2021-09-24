@@ -7,10 +7,10 @@
 
 class RandomDice : public Dice {
 public:
-	RandomDice();
-	virtual int next(int max);
+    RandomDice();
+    virtual int next(int max);
 private:
-	std::default_random_engine generator;
+    std::default_random_engine generator;
 };
 
 #endif

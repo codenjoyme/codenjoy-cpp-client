@@ -7,22 +7,22 @@
 
 class Element : public CharElement {
 public:
-	Element(Char el);
-	Element(String name);
+    Element(Char el);
+    Element(String name);
 
-	bool operator==(const Element& el) const;
+    bool operator==(const Element& el) const;
 
-	Char ch();
-	String name();
+    Char ch();
+    String name();
 
-	Char getChar() const;
-	String valueOf(Char ch) const;
+    Char getChar() const;
+    String valueOf(Char ch) const;
 
 private:
-	static ElementMap initialiseElements();
-	static const ElementMap Elements;
+    static ElementMap initialiseElements();
+    static const ElementMap Elements;
 
-	ElementItem elem;
+    ElementItem elem;
 };
 
 #endif

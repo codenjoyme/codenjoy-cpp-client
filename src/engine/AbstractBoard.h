@@ -9,25 +9,25 @@
 
 class AbstractBoard {
 public:
-	AbstractBoard(String boardString = LL(""));
+    AbstractBoard(String boardString = LL(""));
 
-	CharElement* getAt(int x, int y) const;
-	bool isAt(int x, int y, CharElement* el) const;
-	bool isAt(int x, int y, std::list<CharElement*> els) const;
+    CharElement* getAt(int x, int y) const;
+    bool isAt(int x, int y, CharElement* el) const;
+    bool isAt(int x, int y, std::list<CharElement*> els) const;
 
-	int boardSize() const;
+    int boardSize() const;
 
-	bool isNear(int x, int y, CharElement* el) const;
-	int countNear(int x, int y, CharElement* el) const;
+    bool isNear(int x, int y, CharElement* el) const;
+    int countNear(int x, int y, CharElement* el) const;
 
 protected:
-	PointList findAll(CharElement* el) const;
-	String boardAsString() const;
-	virtual CharElement* valueOf(Char ch) const = 0;
+    PointList findAll(CharElement* el) const;
+    String boardAsString() const;
+    virtual CharElement* valueOf(Char ch) const = 0;
 
-	String board;
-	int size;
-	LengthToXY xyl;
+    String board;
+    int size;
+    LengthToXY xyl;
 };
 
 #endif

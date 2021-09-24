@@ -14,13 +14,13 @@
 class YourSolver : public DirectionSolver
 {
 public:
-	YourSolver(Dice* d) : dice(d) {}
+    YourSolver(Dice* d) : dice(d) {}
 
-	// From DirectionSolver
-	virtual String get(String boardString);
+    // From DirectionSolver
+    virtual String get(String boardString);
 
 private:
-	Dice* dice;
+    Dice* dice;
 };
 
 #endif

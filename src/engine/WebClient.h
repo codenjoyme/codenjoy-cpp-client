@@ -23,16 +23,16 @@ typedef websocketpp::config::asio_client::message_type::ptr message_ptr;
 class WebClient
 {
 public:
-	WebClient(DirectionSolver* ds);
-	void run(std::string server, std::string user);
+    WebClient(DirectionSolver* ds);
+    void run(std::string server, std::string user);
 
 private:
-	bool connect();
-	void onMessage(Client* c, websocketpp::connection_hdl hdl, message_ptr pMsg);
-	Client client;
-	DirectionSolver* solver;
-	std::string serverName;
-	std::string userName;
+    bool connect();
+    void onMessage(Client* c, websocketpp::connection_hdl hdl, message_ptr pMsg);
+    Client client;
+    DirectionSolver* solver;
+    std::string serverName;
+    std::string userName;
 };
 
 #endif

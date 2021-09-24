@@ -6,7 +6,7 @@
 
 class DirectionSolver {
 public:
-	virtual String get(String board) = 0;
+    virtual String get(String board) = 0;
 };
 
 #endif

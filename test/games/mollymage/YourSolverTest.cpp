@@ -5,25 +5,25 @@
 #include "games/mollymage/YourSolver.h"
 
 TEST(shouldWhen, YourSolverTest) {
-	StringStream ss;
-	ss << "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼";
-	ss << "☼☺        # # ☼";
-	ss << "☼ ☼ ☼ ☼#☼ ☼ ☼ ☼";
+    StringStream ss;
+    ss << "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼";
+    ss << "☼☺        # # ☼";
+    ss << "☼ ☼ ☼ ☼#☼ ☼ ☼ ☼";
     ss << "☼##           ☼";
     ss << "☼ ☼ ☼#☼ ☼ ☼ ☼ ☼";
     ss << "☼   #    # #  ☼";
     ss << "☼ ☼ ☼ ☼#☼ ☼ ☼ ☼";
-	ss << "☼             ☼";
+    ss << "☼             ☼";
     ss << "☼#☼ ☼ ☼#☼ ☼ ☼#☼";
     ss << "☼  #  #       ☼";
     ss << "☼ ☼ ☼ ☼ ☼ ☼ ☼#☼";
     ss << "☼ ##      #   ☼";
-	ss << "☼ ☼ ☼ ☼ ☼ ☼ ☼#☼";
+    ss << "☼ ☼ ☼ ☼ ☼ ☼ ☼#☼";
     ss << "☼ #   #  &    ☼";
     ss << "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼"
 
-	RandomDice* rd = new RandomDice();
-	DirectionSolver* dds = new YourSolver(rd);
+    RandomDice* rd = new RandomDice();
+    DirectionSolver* dds = new YourSolver(rd);
 
-	EXPECT_EQ(L"ACT", dds->get(ss.str()));
+    EXPECT_EQ(L"ACT", dds->get(ss.str()));
 }

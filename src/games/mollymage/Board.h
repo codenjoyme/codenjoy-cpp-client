@@ -4,32 +4,32 @@
 class Board : public AbstractBoard
 {
 public:
-	explicit Board(String boardString = LL("")) : AbstractBoard(boardString) { }
+    explicit Board(String boardString = LL("")) : AbstractBoard(boardString) { }
 
-	String toString() const;
+    String toString() const;
 
-	Point getHero() const;
-	PointList getOtherHeroes() const;
-	PointList getEnemyHeroes() const;
-	bool isMyHeroDead() const;
+    Point getHero() const;
+    PointList getOtherHeroes() const;
+    PointList getEnemyHeroes() const;
+    bool isMyHeroDead() const;
 
-	PointList getBarriers() const;
+    PointList getBarriers() const;
 
-	PointList getGhosts() const;
+    PointList getGhosts() const;
 
-	PointList getWalls() const;
-	PointList getTreasureBoxes() const;
-	PointList getPotions() const;
-	PointList getBlasts() const;
+    PointList getWalls() const;
+    PointList getTreasureBoxes() const;
+    PointList getPotions() const;
+    PointList getBlasts() const;
 
-	PointList getFutureBlasts() const;
+    PointList getFutureBlasts() const;
 
-	bool isBarrierAt(int x, int y) const;
+    bool isBarrierAt(int x, int y) const;
 
 protected:
-	virtual CharElement* valueOf(Char ch) const override;
+    virtual CharElement* valueOf(Char ch) const override;
 
 private:
-	PointList removeDuplicates(PointList lst) const;
+    PointList removeDuplicates(PointList lst) const;
 };
 

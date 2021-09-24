@@ -5,8 +5,8 @@
 
 class CharElement {
 public:
-	virtual Char ch() = 0;
-	virtual String name() = 0;
+    virtual Char ch() = 0;
+    virtual String name() = 0;
 };
 
 #endif
