@@ -47,107 +47,74 @@ CharElement* Board::valueOf(Char ch) const {
 }
 
 Point Board::getHero() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_PIT_RIGHT"))));
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("HERO_DIE"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_PIT"))));
 
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO_MASK_PIT_RIGHT"))));
-    return rslt.front();
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_DIE"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_MASK_PIT"))));
+    return result.front();
 }
 
 PointList Board::getOtherHeroes() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_RIGHT"))));
-
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT_RIGHT"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_DIE"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_PIT"))));
+    
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_DIE"))));    
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_MASK_PIT"))));
+    return result;
 }
 
 PointList Board::getEnemyHeroes() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_PIT_RIGHT"))));
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_DIE"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_PIT"))));
 
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_DIE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_CRACK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_CRACK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIT_RIGHT"))));
-    return rslt;
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_DIE"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_MASK_PIT"))));
+    return result;
 }
 
 PointList Board::getRobbers() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_LADDER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_FALL_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_FALL_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIPE_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIPE_RIGHT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIT_LEFT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ROBBER_PIT_RIGHT"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_LADDER"))));
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_LEFT"))));
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_RIGHT"))));
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_FALL"))));
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_PIPE"))));
+    result.splice(result.end(), findAll(new Element(LL("ROBBER_PIT"))));
+    return result;
 }
 
 bool Board::isMyHeroDead() const {
@@ -156,10 +123,10 @@ bool Board::isMyHeroDead() const {
 }
 
 PointList Board::getBarriers() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("BRICK"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("STONE"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("BRICK"))));
+    result.splice(result.end(), findAll(new Element(LL("STONE"))));
+    return result;
 }
 
 bool Board::isBarrierAt(int x, int y) const {
@@ -174,50 +141,50 @@ bool Board::isBarrierAt(int x, int y) const {
 }
 
 PointList Board::getPits() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("CRACK_PIT"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("PIT_FILL_1"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("PIT_FILL_2"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("PIT_FILL_3"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("PIT_FILL_4"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("CRACK_PIT"))));
+    result.splice(result.end(), findAll(new Element(LL("PIT_FILL_1"))));
+    result.splice(result.end(), findAll(new Element(LL("PIT_FILL_2"))));
+    result.splice(result.end(), findAll(new Element(LL("PIT_FILL_3"))));
+    result.splice(result.end(), findAll(new Element(LL("PIT_FILL_4"))));
+    return result;
 }
 
 PointList Board::getClues() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLUE_KNIFE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLUE_GLOVE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLUE_RING"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("CLUE_KNIFE"))));
+    result.splice(result.end(), findAll(new Element(LL("CLUE_GLOVE"))));
+    result.splice(result.end(), findAll(new Element(LL("CLUE_RING"))));
+    return result;
 }
 
 PointList Board::getBackways() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("BACKWAY"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("BACKWAY"))));
+    return result;
 }
 
 PointList Board::getPotions() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("MASK_POTION"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("MASK_POTION"))));
+    return result;
 }
 
 PointList Board::getDoors() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_GOLD"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_SILVER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OPENED_DOOR_BRONZE"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_GOLD"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_SILVER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("CLOSED_DOOR_BRONZE"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("OPENED_DOOR_GOLD"))));
+    result.splice(result.end(), findAll(new Element(LL("OPENED_DOOR_SILVER"))));
+    result.splice(result.end(), findAll(new Element(LL("OPENED_DOOR_BRONZE"))));
+    result.splice(result.end(), findAll(new Element(LL("CLOSED_DOOR_GOLD"))));
+    result.splice(result.end(), findAll(new Element(LL("CLOSED_DOOR_SILVER"))));
+    result.splice(result.end(), findAll(new Element(LL("CLOSED_DOOR_BRONZE"))));
+    return result;
 }
 
 PointList Board::getKeys() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_GOLD"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_SILVER"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("KEY_BRONZE"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("KEY_GOLD"))));
+    result.splice(result.end(), findAll(new Element(LL("KEY_SILVER"))));
+    result.splice(result.end(), findAll(new Element(LL("KEY_BRONZE"))));
+    return result;
 }
