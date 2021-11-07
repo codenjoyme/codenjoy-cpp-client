@@ -117,7 +117,7 @@ PointList Board::getRobbers() const {
     return result;
 }
 
-bool Board::isMyHeroDead() const {
+bool Board::isGameOver() const {
     return board.find(Element(LL("HERO_DIE")).getChar()) != String::npos &&
            board.find(Element(LL("HERO_MASK_DIE")).getChar()) != String::npos;
 }

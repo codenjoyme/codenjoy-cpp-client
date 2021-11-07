@@ -56,7 +56,7 @@ PointList Board::getOtherHeroes() const {
     return result;
 }
 
-bool Board::isMyHeroDead() const {
+bool Board::isGameOver() const {
     return board.find(Element(LL("DEAD_HERO")).getChar()) != String::npos;
 }
 

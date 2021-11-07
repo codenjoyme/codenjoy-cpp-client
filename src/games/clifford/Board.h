@@ -34,7 +34,7 @@ public:
     PointList getOtherHeroes() const;
     PointList getEnemyHeroes() const;
     PointList getRobbers() const;
-    bool isMyHeroDead() const;
+    bool isGameOver() const;
 
     PointList getBarriers() const;
     bool isBarrierAt(int x, int y) const;
