@@ -22,10 +22,10 @@
 
 #include "Board.h"
 
-String pointListToString(PointList lst) {
+String pointListToString(PointList list) {
     StringStream ss;
-    for (Point i : lst) {
-        ss << i.toString() << " ";
+    for (Point pt : list) {
+        ss << pt.toString() << " ";
     }
     return ss.str();
 }
@@ -49,27 +49,27 @@ CharElement* Board::valueOf(Char ch) const {
 }
 
 Point Board::getHero() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("DEAD_HERO"))));
-    return rslt.front();
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("DEAD_HERO"))));
+    return result.front();
 }
 
 PointList Board::getOtherHeroes() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_DEAD_HERO"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_DEAD_HERO"))));
+    return result;
 }
 
 PointList Board::getEnemyHeroes() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_DEAD_HERO"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_DEAD_HERO"))));
+    return result;
 }
 
 bool Board::isMyHeroDead() const {
@@ -77,13 +77,13 @@ bool Board::isMyHeroDead() const {
 }
 
 PointList Board::getBarriers() const {
-    PointList rslt = getGhosts();
-    rslt.splice(rslt.end(), getWalls());
-    rslt.splice(rslt.end(), getPotions());
-    rslt.splice(rslt.end(), getTreasureBoxes());
-    rslt.splice(rslt.end(), getOtherHeroes());
-    rslt.splice(rslt.end(), getEnemyHeroes());
-    return removeDuplicates(rslt);
+    PointList result = getGhosts();
+    result.splice(result.end(), getWalls());
+    result.splice(result.end(), getPotions());
+    result.splice(result.end(), getTreasureBoxes());
+    result.splice(result.end(), getOtherHeroes());
+    result.splice(result.end(), getEnemyHeroes());
+    return removeDuplicates(result);
 }
 
 PointList Board::getGhosts() const {
@@ -99,16 +99,16 @@ PointList Board::getTreasureBoxes() const {
 }
 
 PointList Board::getPotions() const {
-    PointList rslt;
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_1"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_2"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_3"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_4"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_TIMER_5"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("POTION_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
-    rslt.splice(rslt.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
-    return rslt;
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("POTION_TIMER_1"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_TIMER_2"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_TIMER_3"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_TIMER_4"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_TIMER_5"))));
+    result.splice(result.end(), findAll(new Element(LL("POTION_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_POTION_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
+    return result;
 }
 
 PointList Board::getBlasts() const {
@@ -121,38 +121,38 @@ PointList Board::getFutureBlasts() const {
     potions.splice(potions.end(), findAll(new Element(LL("ENEMY_POTION_HERO"))));
     potions.splice(potions.end(), findAll(new Element(LL("POTION_HERO"))));
 
-    PointList rslt;
+    PointList result;
     PointList walls = getWalls();
-    for (auto ptn : potions) {
-        rslt.push_back(ptn);
-        PointList potionSurrounds = ptn.getSurrounds(size);
+    for (auto potion : potions) {
+        result.push_back(potion);
+        PointList potionSurrounds = potion.getSurrounds(size);
         for (auto surr : potionSurrounds) {
             if (std::find(walls.begin(), walls.end(), surr) == walls.end()) {
-                rslt.push_back(surr);
+                result.push_back(surr);
             }
         }
     }
 
-    return removeDuplicates(rslt);
+    return removeDuplicates(result);
 }
 
-PointList Board::removeDuplicates(PointList lst) const {
-    PointList res;
-    for (auto pt : lst) {
-        if (std::find(res.begin(), res.end(), pt) == res.end()) {
-            res.push_back(pt);
+PointList Board::removeDuplicates(PointList list) const {
+    PointList result;
+    for (auto pt : list) {
+        if (std::find(result.begin(), result.end(), pt) == result.end()) {
+            result.push_back(pt);
         }
     }
-    return res;
+    return result;
 }
 
 bool Board::isBarrierAt(int x, int y) const {
-    Point p(x, y);
-    if (p.isBad(size)) return false;
+    Point pt(x, y);
+    if (pt.isBad(size)) return false;
 
     PointList barriers = getBarriers();
-    for (auto b : barriers) {
-        if (b == p) return true;
+    for (auto barrier : barriers) {
+        if (barrier == pt) return true;
     }
     return false;
 }

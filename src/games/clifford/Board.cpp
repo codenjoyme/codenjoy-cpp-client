@@ -22,10 +22,10 @@
 
 #include "Board.h"
 
-String pointListToString(PointList lst) {
+String pointListToString(PointList list) {
     StringStream ss;
-    for (Point i : lst) {
-        ss << i.toString() << " ";
+    for (Point pt : list) {
+        ss << pt.toString() << " ";
     }
     return ss.str();
 }
@@ -130,12 +130,12 @@ PointList Board::getBarriers() const {
 }
 
 bool Board::isBarrierAt(int x, int y) const {
-    Point p(x, y);
-    if (p.isBad(size)) return false;
+    Point pt(x, y);
+    if (pt.isBad(size)) return false;
 
     PointList barriers = getBarriers();
-    for (auto b : barriers) {
-        if (b == p) return true;
+    for (auto barrier : barriers) {
+        if (barrier == pt) return true;
     }
     return false;
 }
