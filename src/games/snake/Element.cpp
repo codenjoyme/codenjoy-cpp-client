@@ -58,50 +58,79 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Пустое место, куда можно перейти герою.
+        // Stone.
+
+    result[LL("BAD_APPLE")] = LL('☻');
+
+        // Having eaten it, you shorten it in length. If it is not long
+        // enough, you die.
+
+    result[LL("GOOD_APPLE")] = LL('☺');
+
+        // An obstacle that cannot be passed. It is also the border of
+        // the field.
+
+    result[LL("BREAK")] = LL('☼');
+
+        // An empty place in the field where the snake can go.
 
     result[LL("NONE")] = LL(' ');
 
-        // Взрыв героя, астероида или мины (мина взрывается сильнее).
+        // Snake head is pointing down.
 
-    result[LL("EXPLOSION")] = LL('x');
+    result[LL("HEAD_DOWN")] = LL('▼');
 
-        // Стенка, через которую нельзя пройти.
+        // Snake head is pointing left.
 
-    result[LL("WALL")] = LL('☼');
+    result[LL("HEAD_LEFT")] = LL('◄');
 
-        // Твой герой.
+        // Snake head is pointing right.
 
-    result[LL("HERO")] = LL('☺');
+    result[LL("HEAD_RIGHT")] = LL('►');
 
-        // Герои других игроков.
+        // Snake head is pointing up.
 
-    result[LL("OTHER_HERO")] = LL('☻');
+    result[LL("HEAD_UP")] = LL('▲');
 
-        // Твой герой погиб. Пропадет в следующем тике.
+        // Horizontal part of the body.
 
-    result[LL("DEAD_HERO")] = LL('+');
+    result[LL("TAIL_HORIZONTAL")] = LL('═');
 
-        // Золото - за ним стоит поохотиться.
+        // Vertical part of the body.
 
-    result[LL("GOLD")] = LL('$');
+    result[LL("TAIL_VERTICAL")] = LL('║');
 
-        // Мины - их надо избегать, а лучше уничтожать. Взрывная волна
-        // от мины размером +1 клеточка с каждой стороны.
+        // Turning the snake body from left to down.
 
-    result[LL("BOMB")] = LL('♣');
+    result[LL("TAIL_LEFT_DOWN")] = LL('╗');
 
-        // Астероиды - их надо избегать, а лучше уничтожать.
+        // Turning the snake body from left to up.
 
-    result[LL("STONE")] = LL('0');
+    result[LL("TAIL_LEFT_UP")] = LL('╝');
 
-        // Магазин патронов.
+        // Turning the snake body from right to down.
 
-    result[LL("BULLET_PACK")] = LL('7');
+    result[LL("TAIL_RIGHT_DOWN")] = LL('╔');
 
-        // Пуля.
+        // Turning the snake body from right to up.
 
-    result[LL("BULLET")] = LL('*');
+    result[LL("TAIL_RIGHT_UP")] = LL('╚');
+
+        // Down tail.
+
+    result[LL("TAIL_END_DOWN")] = LL('╙');
+
+        // Left tail.
+
+    result[LL("TAIL_END_LEFT")] = LL('╘');
+
+        // Up tail.
+
+    result[LL("TAIL_END_UP")] = LL('╓');
+
+        // Right tail.
+
+    result[LL("TAIL_END_RIGHT")] = LL('╕');
 
     return result;
 };

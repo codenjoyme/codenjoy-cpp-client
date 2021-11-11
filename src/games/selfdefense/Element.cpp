@@ -58,50 +58,53 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Пустое место, куда можно перейти герою.
+        // Пустое место в космосе. Сюда может переместиться корабль.
 
     result[LL("NONE")] = LL(' ');
 
-        // Взрыв героя, астероида или мины (мина взрывается сильнее).
+        // Инопланетянин. Атакует всех.
 
-    result[LL("EXPLOSION")] = LL('x');
+    result[LL("ENEMY")] = LL('X');
 
-        // Стенка, через которую нельзя пройти.
+        // Твоя база. Ее нужно защищать.
 
-    result[LL("WALL")] = LL('☼');
+    result[LL("BASE")] = LL('☺');
 
-        // Твой герой.
+        // Твой корабль.
 
-    result[LL("HERO")] = LL('☺');
+    result[LL("SPACESHIP")] = LL('.');
 
-        // Герои других игроков.
+        // Твоя платформа.
 
-    result[LL("OTHER_HERO")] = LL('☻');
+    result[LL("PLATFORM")] = LL('=');
 
-        // Твой герой погиб. Пропадет в следующем тике.
+        // Защитники твоей базы. Выносят вначале их, потом саму базу.
 
-    result[LL("DEAD_HERO")] = LL('+');
+    result[LL("GUARD")] = LL('+');
 
-        // Золото - за ним стоит поохотиться.
+        // Базы твоих противников.
 
-    result[LL("GOLD")] = LL('$');
+    result[LL("OTHER_BASE")] = LL('☻');
 
-        // Мины - их надо избегать, а лучше уничтожать. Взрывная волна
-        // от мины размером +1 клеточка с каждой стороны.
+        // Корабли противников.
 
-    result[LL("BOMB")] = LL('♣');
+    result[LL("OTHER_SPACESHIP")] = LL(',');
 
-        // Астероиды - их надо избегать, а лучше уничтожать.
+        // Платформы противников.
 
-    result[LL("STONE")] = LL('0');
+    result[LL("OTHER_PLATFORM")] = LL('-');
 
-        // Магазин патронов.
+        // Защитники баз противников.
 
-    result[LL("BULLET_PACK")] = LL('7');
+    result[LL("OTHER_GUARD")] = LL('*');
 
-        // Пуля.
+        // Туман войны.
 
-    result[LL("BULLET")] = LL('*');
+    result[LL("FOG")] = LL('F');
+
+        // Космос.
+
+    result[LL("BACKGROUND")] = LL('G');
 
     return result;
 };

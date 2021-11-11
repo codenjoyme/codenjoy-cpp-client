@@ -58,7 +58,7 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Пустое поле.
+        // Пустое место – по которому может двигаться герой.
 
     result[LL("NONE")] = LL(' ');
 

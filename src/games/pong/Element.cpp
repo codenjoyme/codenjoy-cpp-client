@@ -58,50 +58,29 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Пустое место, куда можно перейти герою.
+        // Пустое место на поле.
 
     result[LL("NONE")] = LL(' ');
 
-        // Взрыв героя, астероида или мины (мина взрывается сильнее).
+        // Вертикальная граница поля.
 
-    result[LL("EXPLOSION")] = LL('x');
+    result[LL("VERTICAL_WALL")] = LL('|');
 
-        // Стенка, через которую нельзя пройти.
+        // Горизонтальная граница поля.
 
-    result[LL("WALL")] = LL('☼');
+    result[LL("HORIZONTAL_WALL")] = LL('-');
 
-        // Твой герой.
+        // Мяч.
 
-    result[LL("HERO")] = LL('☺');
+    result[LL("BALL")] = LL('o');
 
-        // Герои других игроков.
+        // Игровая панель противника (доска отбивающая мяч).
 
-    result[LL("OTHER_HERO")] = LL('☻');
+    result[LL("PANEL")] = LL('#');
 
-        // Твой герой погиб. Пропадет в следующем тике.
+        // Твоя игровая панель (доска отбивающая мяч).
 
-    result[LL("DEAD_HERO")] = LL('+');
-
-        // Золото - за ним стоит поохотиться.
-
-    result[LL("GOLD")] = LL('$');
-
-        // Мины - их надо избегать, а лучше уничтожать. Взрывная волна
-        // от мины размером +1 клеточка с каждой стороны.
-
-    result[LL("BOMB")] = LL('♣');
-
-        // Астероиды - их надо избегать, а лучше уничтожать.
-
-    result[LL("STONE")] = LL('0');
-
-        // Магазин патронов.
-
-    result[LL("BULLET_PACK")] = LL('7');
-
-        // Пуля.
-
-    result[LL("BULLET")] = LL('*');
+    result[LL("HERO")] = LL('H');
 
     return result;
 };

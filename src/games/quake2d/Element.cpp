@@ -58,19 +58,15 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Пустое место, куда можно перейти герою.
+        // Пустое место – по которому может двигаться герой.
 
     result[LL("NONE")] = LL(' ');
 
-        // Взрыв героя, астероида или мины (мина взрывается сильнее).
-
-    result[LL("EXPLOSION")] = LL('x');
-
-        // Стенка, через которую нельзя пройти.
+        // Стена, через которую нельзя пройти.
 
     result[LL("WALL")] = LL('☼');
 
-        // Твой герой.
+        // Твой герой
 
     result[LL("HERO")] = LL('☺');
 
@@ -78,30 +74,33 @@ ElementMap Element::initialiseElements() {
 
     result[LL("OTHER_HERO")] = LL('☻');
 
-        // Твой герой погиб. Пропадет в следующем тике.
+        // Твой герой погиб.
 
-    result[LL("DEAD_HERO")] = LL('+');
+    result[LL("DEAD_HERO")] = LL('X');
 
-        // Золото - за ним стоит поохотиться.
+        // Герои других игроков под модификаторами.
 
-    result[LL("GOLD")] = LL('$');
+    result[LL("SUPER_OTHER_HERO")] = LL('Š');
 
-        // Мины - их надо избегать, а лучше уничтожать. Взрывная волна
-        // от мины размером +1 клеточка с каждой стороны.
-
-    result[LL("BOMB")] = LL('♣');
-
-        // Астероиды - их надо избегать, а лучше уничтожать.
-
-    result[LL("STONE")] = LL('0');
-
-        // Магазин патронов.
-
-    result[LL("BULLET_PACK")] = LL('7');
-
-        // Пуля.
+        // Пуля, ее надо стралять ).
 
     result[LL("BULLET")] = LL('*');
+
+        // Модификатор. Дополнительная защита.
+
+    result[LL("SUPER_DEFENCE")] = LL('#');
+
+        // Модификатор. Дополнительная защита.
+
+    result[LL("HEALTH_PACKAGE")] = LL('+');
+
+        // Модификатор. Дополнительная атака.
+
+    result[LL("SUPER_WEAPON")] = LL('~');
+
+        // Робот.
+
+    result[LL("ROBOT")] = LL('!');
 
     return result;
 };

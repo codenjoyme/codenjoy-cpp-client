@@ -62,7 +62,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("NONE")] = LL(' ');
 
-        // Wall you can't walk through.
+        // Wall you cant walk through.
 
     result[LL("WALL")] = LL('☼');
 

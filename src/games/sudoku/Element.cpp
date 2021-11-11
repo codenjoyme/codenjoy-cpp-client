@@ -58,7 +58,7 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Отгадай, что тут за цифра.
+        // Пустое место – циферку в котором предстоит отгадать.
 
     result[LL("NONE")] = LL(' ');
 
