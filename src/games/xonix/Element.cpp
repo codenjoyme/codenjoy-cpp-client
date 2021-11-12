@@ -58,11 +58,12 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Море, которое нужно осушать. Тут плавают морские враги.
+        // Море, где живут морские враги. Море нужно делать сушей.
 
     result[LL("SEA")] = LL('.');
 
-        // Ничейная суша. Тут бегают сухопутные враги.
+        // Ничейная суша, по которой можно передвигаться героям и
+        // наземным врагам.
 
     result[LL("LAND")] = LL('X');
 
