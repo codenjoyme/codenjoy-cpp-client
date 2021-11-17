@@ -30,7 +30,7 @@ TEST(shouldWhen, YourSolverTest) {
     StringStream ss;
     ss << "☼☼☼☼☼";
     ss << "☼   ☼";
-    ss << "☼ ⊳ ☼";
+    ss << "☼ ► ☼";
     ss << "☼   ☼";
     ss << "☼☼☼☼☼";
 

@@ -112,11 +112,11 @@ ElementMap Element::initialiseElements() {
         // Your hero is dead. In the next tick, it will disappear and
         // appear in a new location.
 
-    result[LL("HERO_DIE")] = LL('Ѡ');
+    result[LL("HERO_DIE")] = LL('O');
 
         // Your hero is climbing the ladder.
 
-    result[LL("HERO_LADDER")] = LL('Y');
+    result[LL("HERO_LADDER")] = LL('A');
 
         // Your hero runs to the left.
 
@@ -128,225 +128,225 @@ ElementMap Element::initialiseElements() {
 
         // Your hero is falling.
 
-    result[LL("HERO_FALL")] = LL(']');
+    result[LL("HERO_FALL")] = LL('U');
 
         // Your hero is crawling along the pipe.
 
-    result[LL("HERO_PIPE")] = LL('{');
+    result[LL("HERO_PIPE")] = LL('I');
 
         // Your hero in the pit.
 
-    result[LL("HERO_PIT")] = LL('⍃');
+    result[LL("HERO_PIT")] = LL('E');
 
         // Your shadow-hero is dead. In the next tick, it will
         // disappear and appear in a new location.
 
-    result[LL("HERO_MASK_DIE")] = LL('x');
+    result[LL("HERO_MASK_DIE")] = LL('o');
 
         // Your shadow-hero is climbing the ladder.
 
-    result[LL("HERO_MASK_LADDER")] = LL('⍬');
+    result[LL("HERO_MASK_LADDER")] = LL('a');
 
         // Your shadow-hero runs to the left.
 
-    result[LL("HERO_MASK_LEFT")] = LL('⊲');
+    result[LL("HERO_MASK_LEFT")] = LL('h');
 
         // Your shadow-hero runs to the right.
 
-    result[LL("HERO_MASK_RIGHT")] = LL('⊳');
+    result[LL("HERO_MASK_RIGHT")] = LL('w');
 
         // Your shadow-hero is falling.
 
-    result[LL("HERO_MASK_FALL")] = LL('⊅');
+    result[LL("HERO_MASK_FALL")] = LL('u');
 
         // Your shadow-hero is crawling along the pipe.
 
-    result[LL("HERO_MASK_PIPE")] = LL('⋜');
+    result[LL("HERO_MASK_PIPE")] = LL('i');
 
         // Your shadow-hero in the pit.
 
-    result[LL("HERO_MASK_PIT")] = LL('ᐊ');
+    result[LL("HERO_MASK_PIT")] = LL('e');
 
         // Other hero is dead. In the next tick, it will disappear and
         // appear in a new location.
 
-    result[LL("OTHER_HERO_DIE")] = LL('Z');
+    result[LL("OTHER_HERO_DIE")] = LL('C');
 
         // Other hero is climbing the ladder.
 
-    result[LL("OTHER_HERO_LADDER")] = LL('U');
+    result[LL("OTHER_HERO_LADDER")] = LL('D');
 
         // Other hero runs to the left.
 
-    result[LL("OTHER_HERO_LEFT")] = LL(')');
+    result[LL("OTHER_HERO_LEFT")] = LL('«');
 
         // Other hero runs to the right.
 
-    result[LL("OTHER_HERO_RIGHT")] = LL('(');
+    result[LL("OTHER_HERO_RIGHT")] = LL('»');
 
         // Other hero is falling.
 
-    result[LL("OTHER_HERO_FALL")] = LL('⊐');
+    result[LL("OTHER_HERO_FALL")] = LL('F');
 
         // Other hero is crawling along the pipe.
 
-    result[LL("OTHER_HERO_PIPE")] = LL('Э');
+    result[LL("OTHER_HERO_PIPE")] = LL('J');
 
         // Other hero in the pit.
 
-    result[LL("OTHER_HERO_PIT")] = LL('ᗉ');
+    result[LL("OTHER_HERO_PIT")] = LL('K');
 
         // Other shadow-hero is dead. In the next tick, it will
         // disappear and appear in a new location.
 
-    result[LL("OTHER_HERO_MASK_DIE")] = LL('⋈');
+    result[LL("OTHER_HERO_MASK_DIE")] = LL('c');
 
         // Other shadow-hero is climbing the ladder.
 
-    result[LL("OTHER_HERO_MASK_LADDER")] = LL('⋕');
+    result[LL("OTHER_HERO_MASK_LADDER")] = LL('d');
 
         // Other shadow-hero runs to the left.
 
-    result[LL("OTHER_HERO_MASK_LEFT")] = LL('⋊');
+    result[LL("OTHER_HERO_MASK_LEFT")] = LL('Z');
 
         // Other shadow-hero runs to the right.
 
-    result[LL("OTHER_HERO_MASK_RIGHT")] = LL('⋉');
+    result[LL("OTHER_HERO_MASK_RIGHT")] = LL('z');
 
         // Other shadow-hero is falling.
 
-    result[LL("OTHER_HERO_MASK_FALL")] = LL('⋣');
+    result[LL("OTHER_HERO_MASK_FALL")] = LL('f');
 
         // Other shadow-hero is crawling along the pipe.
 
-    result[LL("OTHER_HERO_MASK_PIPE")] = LL('⊣');
+    result[LL("OTHER_HERO_MASK_PIPE")] = LL('j');
 
         // Other shadow-hero in the pit.
 
-    result[LL("OTHER_HERO_MASK_PIT")] = LL('ᗏ');
+    result[LL("OTHER_HERO_MASK_PIT")] = LL('k');
 
         // Enemy hero is dead. In the next tick, it will disappear and
         // appear in a new location.
 
-    result[LL("ENEMY_HERO_DIE")] = LL('Ž');
+    result[LL("ENEMY_HERO_DIE")] = LL('L');
 
         // Enemy hero is climbing the ladder.
 
-    result[LL("ENEMY_HERO_LADDER")] = LL('Ǔ');
+    result[LL("ENEMY_HERO_LADDER")] = LL('N');
 
         // Enemy hero runs to the left.
 
-    result[LL("ENEMY_HERO_LEFT")] = LL('❫');
+    result[LL("ENEMY_HERO_LEFT")] = LL('P');
 
         // Enemy hero runs to the right.
 
-    result[LL("ENEMY_HERO_RIGHT")] = LL('❪');
+    result[LL("ENEMY_HERO_RIGHT")] = LL('Q');
 
         // Enemy hero is falling.
 
-    result[LL("ENEMY_HERO_FALL")] = LL('⋥');
+    result[LL("ENEMY_HERO_FALL")] = LL('R');
 
         // Enemy hero is crawling along the pipe.
 
-    result[LL("ENEMY_HERO_PIPE")] = LL('Ǯ');
+    result[LL("ENEMY_HERO_PIPE")] = LL('T');
 
         // Enemy hero in the pit.
 
-    result[LL("ENEMY_HERO_PIT")] = LL('⇇');
+    result[LL("ENEMY_HERO_PIT")] = LL('V');
 
         // Enemy shadow-hero is dead. In the next tick, it will
         // disappear and appear in a new location.
 
-    result[LL("ENEMY_HERO_MASK_DIE")] = LL('⧓');
+    result[LL("ENEMY_HERO_MASK_DIE")] = LL('l');
 
         // Enemy shadow-hero is climbing the ladder.
 
-    result[LL("ENEMY_HERO_MASK_LADDER")] = LL('≠');
+    result[LL("ENEMY_HERO_MASK_LADDER")] = LL('n');
 
         // Enemy shadow-hero runs to the left.
 
-    result[LL("ENEMY_HERO_MASK_LEFT")] = LL('⧒');
+    result[LL("ENEMY_HERO_MASK_LEFT")] = LL('p');
 
         // Enemy shadow-hero runs to the right.
 
-    result[LL("ENEMY_HERO_MASK_RIGHT")] = LL('⧑');
+    result[LL("ENEMY_HERO_MASK_RIGHT")] = LL('q');
 
         // Enemy shadow-hero is falling.
 
-    result[LL("ENEMY_HERO_MASK_FALL")] = LL('⌫');
+    result[LL("ENEMY_HERO_MASK_FALL")] = LL('r');
 
         // Enemy shadow-hero is crawling along the pipe.
 
-    result[LL("ENEMY_HERO_MASK_PIPE")] = LL('❵');
+    result[LL("ENEMY_HERO_MASK_PIPE")] = LL('t');
 
         // Enemy shadow-hero in the pit.
 
-    result[LL("ENEMY_HERO_MASK_PIT")] = LL('⬱');
+    result[LL("ENEMY_HERO_MASK_PIT")] = LL('v');
 
         // Robber is climbing the ladder.
 
-    result[LL("ROBBER_LADDER")] = LL('Q');
+    result[LL("ROBBER_LADDER")] = LL('X');
 
         // Robber runs to the left. Robber picks up the nearest prey
         // and hunts for it until it overtakes it.
 
-    result[LL("ROBBER_LEFT")] = LL('«');
+    result[LL("ROBBER_LEFT")] = LL(')');
 
         // Robber runs to the right. Robber picks up the nearest prey
         // and hunts for it until it overtakes it.
 
-    result[LL("ROBBER_RIGHT")] = LL('»');
+    result[LL("ROBBER_RIGHT")] = LL('(');
 
         // Robber is falling.
 
-    result[LL("ROBBER_FALL")] = LL('‹');
+    result[LL("ROBBER_FALL")] = LL('x');
 
         // Robber is crawling along the pipe.
 
-    result[LL("ROBBER_PIPE")] = LL('<');
+    result[LL("ROBBER_PIPE")] = LL('Y');
 
         // Robber in the pit.
 
-    result[LL("ROBBER_PIT")] = LL('⍇');
+    result[LL("ROBBER_PIT")] = LL('y');
 
         // Opened golden gates. Can only be locked with a golden key.
 
-    result[LL("OPENED_DOOR_GOLD")] = LL('⍙');
+    result[LL("OPENED_DOOR_GOLD")] = LL('g');
 
         // Opened silver gates. Can only be locked with a silver key.
 
-    result[LL("OPENED_DOOR_SILVER")] = LL('⍚');
+    result[LL("OPENED_DOOR_SILVER")] = LL('s');
 
         // Opened bronze gates. Can only be locked with a bronze key.
 
-    result[LL("OPENED_DOOR_BRONZE")] = LL('⍜');
+    result[LL("OPENED_DOOR_BRONZE")] = LL('b');
 
         // Closed golden gates. Can only be opened with a golden key.
 
-    result[LL("CLOSED_DOOR_GOLD")] = LL('⍍');
+    result[LL("CLOSED_DOOR_GOLD")] = LL('G');
 
         // Closed silver gates. Can only be opened with a silver key.
 
-    result[LL("CLOSED_DOOR_SILVER")] = LL('⌺');
+    result[LL("CLOSED_DOOR_SILVER")] = LL('S');
 
         // Closed bronze gates. Can only be opened with a bronze key.
 
-    result[LL("CLOSED_DOOR_BRONZE")] = LL('⌼');
+    result[LL("CLOSED_DOOR_BRONZE")] = LL('B');
 
         // Bronze key. Helps open/close golden gates. The key can only
         // be used once.
 
-    result[LL("KEY_GOLD")] = LL('✦');
+    result[LL("KEY_GOLD")] = LL('+');
 
         // Silver key. Helps open/close silver gates. The key can only
         // be used once.
 
-    result[LL("KEY_SILVER")] = LL('✼');
+    result[LL("KEY_SILVER")] = LL('-');
 
         // Bronze key. Helps open/close bronze gates. The key can only
         // be used once.
 
-    result[LL("KEY_BRONZE")] = LL('⍟');
+    result[LL("KEY_BRONZE")] = LL('!');
 
         // Bullet. After the shot by the hero, the bullet flies until
         // it meets an obstacle. The bullet kills the hero. It
@@ -367,12 +367,12 @@ ElementMap Element::initialiseElements() {
         // Back door - allows the hero to secretly move to another
         // random place on the map.
 
-    result[LL("BACKWAY")] = LL('⊛');
+    result[LL("BACKWAY")] = LL('W');
 
         // Disguise potion - endow the hero with additional abilities.
         // The hero goes into shadow mode.
 
-    result[LL("MASK_POTION")] = LL('S');
+    result[LL("MASK_POTION")] = LL('m');
 
     return result;
 };
