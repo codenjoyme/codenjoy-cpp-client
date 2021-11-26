@@ -333,7 +333,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("CLOSED_DOOR_BRONZE")] = LL('B');
 
-        // Bronze key. Helps open/close golden gates. The key can only
+        // Golden key. Helps open/close golden gates. The key can only
         // be used once.
 
     result[LL("KEY_GOLD")] = LL('+');
