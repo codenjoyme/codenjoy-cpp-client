@@ -20,38 +20,24 @@
  * #L%
  */
 
-#ifndef BOARD_H
-#define BOARD_H
+#include "engine/AbstractBoard.h"
+#include "Element.h"
 
-#include "utils.h"
-
-#include "Point.h"
-#include "LengthToXY.h"
-#include "CharElement.h"
-
-class AbstractBoard {
+class Board : public AbstractBoard
+{
 public:
-    AbstractBoard(String boardString = LL(""));
+    explicit Board(String boardString = LL("")) : AbstractBoard(boardString) { }
 
-    CharElement* getAt(int x, int y) const;
-    bool isAt(int x, int y, CharElement* el) const;
-    bool isAt(int x, int y, std::list<CharElement*> els) const;
+    String toString() const;
 
-    int boardSize() const;
+    bool isGameOver() const;
 
-    bool isNear(int x, int y, CharElement* el) const;
-    int countNear(int x, int y, CharElement* el) const;
+    Point getMe() const;
+
+    bool isWin() const;
 
 protected:
-    PointList findAll(CharElement* el) const;
-    int inversionX(int x) const;
-    int inversionY(int y) const;
-    String boardAsString() const;
-    virtual CharElement* valueOf(Char ch) const = 0;
-
-    String board;
-    int size;
-    LengthToXY xyl;
+    virtual CharElement* valueOf(Char ch) const override;
+    virtual int inversionY(int y) const override;
 };
 
-#endif

@@ -20,38 +20,29 @@
  * #L%
  */
 
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef YOURDIRECTIONSOLVER_H
+#define YOURDIRECTIONSOLVER_H
 
-#include "utils.h"
+#include "engine/utils.h"
 
-#include "Point.h"
-#include "LengthToXY.h"
-#include "CharElement.h"
+#include "Element.h"
+#include "Board.h"
 
-class AbstractBoard {
+#include "engine/DirectionSolver.h"
+#include "engine/Direction.h"
+#include "engine/Dice.h"
+#include "engine/Point.h"
+
+class YourSolver : public DirectionSolver
+{
 public:
-    AbstractBoard(String boardString = LL(""));
+    YourSolver(Dice* d) : dice(d) {}
 
-    CharElement* getAt(int x, int y) const;
-    bool isAt(int x, int y, CharElement* el) const;
-    bool isAt(int x, int y, std::list<CharElement*> els) const;
+    // From DirectionSolver
+    virtual String get(String boardString);
 
-    int boardSize() const;
-
-    bool isNear(int x, int y, CharElement* el) const;
-    int countNear(int x, int y, CharElement* el) const;
-
-protected:
-    PointList findAll(CharElement* el) const;
-    int inversionX(int x) const;
-    int inversionY(int y) const;
-    String boardAsString() const;
-    virtual CharElement* valueOf(Char ch) const = 0;
-
-    String board;
-    int size;
-    LengthToXY xyl;
+private:
+    Dice* dice;
 };
 
 #endif
