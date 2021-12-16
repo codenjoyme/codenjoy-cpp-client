@@ -32,8 +32,11 @@ String pointListToString(PointList list) {
 
 String Board::toString() const {
     StringStream ss;
-    ss << LL("Board:\n") << AbstractBoard::boardAsString() << LL("\n")
-        << LL("Hero at: ") << getHero().toString() << LL("\n");
+    ss  << LL("Board:\n") << AbstractBoard::boardAsString() << LL("\n")
+        << LL("Hero at: ") << getHero().toString() << LL("\n")
+        << LL("Other heroes at: ") << getOtherHeroes().toString() << LL("\n")
+        << LL("Enemy heroes at: ") << getEnemyHeroes().toString() << LL("\n")
+        << LL("Other stuff at: ") << getOtherStuff().toString() << LL("\n");
     return ss.str();
 }
 
@@ -45,12 +48,44 @@ int Board::inversionY(int y) const {
     return size - 1 - y;
 }
 
-Point Board::getMe() const {
+Point Board::getHero() const {
     PointList result;
+    result.splice(result.end(), findAll(new Element(LL("HERO_DEAD"))));
     result.splice(result.end(), findAll(new Element(LL("HERO"))));
-    result.splice(result.end(), findAll(new Element(LL("POTION_HERO"))));
-    result.splice(result.end(), findAll(new Element(LL("DEAD_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_CURE"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_HEALING"))));
     return result.front();
+}
+
+PointList Board::getOtherHeroes() const {
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_DEAD"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_CURE"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_HEALING"))));
+    return result;
+}
+
+PointList Board::getEnemyHeroes() const {
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_DEAD"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("ENEMY_HERO_HEALING"))));
+    return result;
+}
+
+PointList Board::getOtherStuff() const {
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("INFECTION"))));
+    result.splice(result.end(), findAll(new Element(LL("HIDDEN"))));
+    result.splice(result.end(), findAll(new Element(LL("PATHLESS"))));
+    return result;
+}
+
+PointList Board::getWalls() const {
+    PointList result;
+    result.splice(result.end(), findAll(new Element(LL("PATHLESS"))));
+    return result;
 }
 
 bool Board::isGameOver() const {

@@ -32,10 +32,17 @@ public:
 
     bool isGameOver() const;
 
-    Point getMe() const;
+    Point getHero() const;
+
+    PointList getOtherHeroes() const;
+    PointList getEnemyHeroes() const;
+    PointList getWalls() const;
+    PointList getOtherStuff() const;
 
     bool isWin() const;
+    bool isGameOver() const;
 
+    int countContagions(int x,int y) const;
 protected:
     virtual CharElement* valueOf(Char ch) const override;
     virtual int inversionY(int y) const override;
