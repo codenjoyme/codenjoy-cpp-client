@@ -81,7 +81,7 @@ ElementMap Element::initialiseElements() {
         // Boom! this is what is potion does, everything that is
         // destroyable got destroyed.
 
-    result[LL("BOOM")] = LL('҉');
+    result[LL("BLAST")] = LL('҉');
 
         // Indestructible wall - it will not fall from potion.
 

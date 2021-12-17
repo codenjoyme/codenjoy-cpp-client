@@ -112,7 +112,7 @@ PointList Board::getPotions() const {
 }
 
 PointList Board::getBlasts() const {
-    return findAll(new Element(LL("BOOM")));
+    return findAll(new Element(LL("BLAST")));
 }
 
 PointList Board::getFutureBlasts() const {
