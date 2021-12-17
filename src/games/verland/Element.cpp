@@ -132,35 +132,35 @@ ElementMap Element::initialiseElements() {
 
         // Вокруг этой зоны было зафиксировано одно заражение.
 
-    result[LL("ONE_CONTAGION")] = LL('1');
+    result[LL("CONTAGION_ONE")] = LL('1');
 
         // Вокруг этой зоны было зафиксировано два заражения.
 
-    result[LL("TWO_CONTAGIONS")] = LL('2');
+    result[LL("CONTAGION_TWO")] = LL('2');
 
         // Вокруг этой зоны было зафиксировано три заражения.
 
-    result[LL("THREE_CONTAGIONS")] = LL('3');
+    result[LL("CONTAGION_THREE")] = LL('3');
 
         // Вокруг этой зоны было зафиксировано четыре заражения.
 
-    result[LL("FOUR_CONTAGIONS")] = LL('4');
+    result[LL("CONTAGION_FOUR")] = LL('4');
 
         // Вокруг этой зоны было зафиксировано пять заражений.
 
-    result[LL("FIVE_CONTAGIONS")] = LL('5');
+    result[LL("CONTAGION_FIVE")] = LL('5');
 
         // Вокруг этой зоны было зафиксировано шесть заражений.
 
-    result[LL("SIX_CONTAGIONS")] = LL('6');
+    result[LL("CONTAGION_SIX")] = LL('6');
 
         // Вокруг этой зоны было зафиксировано семь заражений.
 
-    result[LL("SEVEN_CONTAGIONS")] = LL('7');
+    result[LL("CONTAGION_SEVEN")] = LL('7');
 
         // Вокруг этой зоны было зафиксировано восемь заражений.
 
-    result[LL("EIGHT_CONTAGIONS")] = LL('8');
+    result[LL("CONTAGION_EIGHT")] = LL('8');
 
     return result;
 };
