@@ -72,23 +72,23 @@ ElementMap Element::initialiseElements() {
 
     result[LL("BREAK")] = LL('☼');
 
-        // An empty place in the field where the snake can go.
+        // An empty place in the field where the hero can go.
 
     result[LL("NONE")] = LL(' ');
 
-        // Snake head is pointing down.
+        // Hero head is pointing down.
 
     result[LL("HEAD_DOWN")] = LL('▼');
 
-        // Snake head is pointing left.
+        // Hero head is pointing left.
 
     result[LL("HEAD_LEFT")] = LL('◄');
 
-        // Snake head is pointing right.
+        // Hero head is pointing right.
 
     result[LL("HEAD_RIGHT")] = LL('►');
 
-        // Snake head is pointing up.
+        // Hero head is pointing up.
 
     result[LL("HEAD_UP")] = LL('▲');
 
@@ -100,19 +100,19 @@ ElementMap Element::initialiseElements() {
 
     result[LL("TAIL_VERTICAL")] = LL('║');
 
-        // Turning the snake body from left to down.
+        // Turning the hero body from left to down.
 
     result[LL("TAIL_LEFT_DOWN")] = LL('╗');
 
-        // Turning the snake body from left to up.
+        // Turning the hero body from left to up.
 
     result[LL("TAIL_LEFT_UP")] = LL('╝');
 
-        // Turning the snake body from right to down.
+        // Turning the hero body from right to down.
 
     result[LL("TAIL_RIGHT_DOWN")] = LL('╔');
 
-        // Turning the snake body from right to up.
+        // Turning the hero body from right to up.
 
     result[LL("TAIL_RIGHT_UP")] = LL('╚');
 

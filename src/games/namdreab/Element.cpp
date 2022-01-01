@@ -58,7 +58,7 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Empty space - space where the snake can move.
+        // Empty space - space where the hero can move.
 
     result[LL("NONE")] = LL(' ');
 
@@ -66,7 +66,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("WALL")] = LL('☼');
 
-        // Respawn point from which the snake starts its movement.
+        // Respawn point from which the hero starts its movement.
 
     result[LL("START_FLOOR")] = LL('#');
 
@@ -94,155 +94,155 @@ ElementMap Element::initialiseElements() {
 
     result[LL("GOLD")] = LL('$');
 
-        // Your snake head pointing down.
+        // Your hero head pointing down.
 
     result[LL("HEAD_DOWN")] = LL('▼');
 
-        // Your snake head pointing left.
+        // Your hero head pointing left.
 
     result[LL("HEAD_LEFT")] = LL('◄');
 
-        // Your snake head pointing right.
+        // Your hero head pointing right.
 
     result[LL("HEAD_RIGHT")] = LL('►');
 
-        // Your snake head pointing up.
+        // Your hero head pointing up.
 
     result[LL("HEAD_UP")] = LL('▲');
 
-        // Your snake is dead.
+        // Your hero is dead.
 
     result[LL("HEAD_DEAD")] = LL('☻');
 
-        // Your snake head under influence Fury pill/Devils mask.
+        // Your hero head under influence Fury pill/Devils mask.
 
     result[LL("HEAD_EVIL")] = LL('♥');
 
-        // Your snake head under influence Flying pill/Angels wings.
+        // Your hero head under influence Flying pill/Angels wings.
 
     result[LL("HEAD_FLY")] = LL('♠');
 
-        // Your snake head when snake is inactive.
+        // Your hero head when hero is inactive.
 
     result[LL("HEAD_SLEEP")] = LL('&');
 
-        // Body of your snake is directed horizontally.
+        // Body of your hero is directed horizontally.
 
     result[LL("BODY_HORIZONTAL")] = LL('═');
 
-        // Body of your snake is directed vertically.
+        // Body of your hero is directed vertically.
 
     result[LL("BODY_VERTICAL")] = LL('║');
 
-        // Turning your snake body from left to down.
+        // Turning your hero body from left to down.
 
     result[LL("BODY_LEFT_DOWN")] = LL('╗');
 
-        // Turning your snake body from left to up.
+        // Turning your hero body from left to up.
 
     result[LL("BODY_LEFT_UP")] = LL('╝');
 
-        // Turning your snake body from right to down.
+        // Turning your hero body from right to down.
 
     result[LL("BODY_RIGHT_DOWN")] = LL('╔');
 
-        // Turning your snake body from left to up.
+        // Turning your hero body from left to up.
 
     result[LL("BODY_RIGHT_UP")] = LL('╚');
 
-        // Your snake tail (end) pointing down.
+        // Your hero tail (end) pointing down.
 
     result[LL("TAIL_END_DOWN")] = LL('╙');
 
-        // Your snake tail (end) pointing left.
+        // Your hero tail (end) pointing left.
 
     result[LL("TAIL_END_LEFT")] = LL('╘');
 
-        // Your snake tail (end) pointing up.
+        // Your hero tail (end) pointing up.
 
     result[LL("TAIL_END_UP")] = LL('╓');
 
-        // Your snake tail (end) pointing right.
+        // Your hero tail (end) pointing right.
 
     result[LL("TAIL_END_RIGHT")] = LL('╕');
 
-        // Your snake tail (end) when snake is inactive.
+        // Your hero tail (end) when hero is inactive.
 
     result[LL("TAIL_INACTIVE")] = LL('~');
 
-        // Enemy snake head pointing down.
+        // Enemy hero head pointing down.
 
     result[LL("ENEMY_HEAD_DOWN")] = LL('˅');
 
-        // Enemy snake head pointing left.
+        // Enemy hero head pointing left.
 
     result[LL("ENEMY_HEAD_LEFT")] = LL('<');
 
-        // Enemy snake head pointing right.
+        // Enemy hero head pointing right.
 
     result[LL("ENEMY_HEAD_RIGHT")] = LL('>');
 
-        // Enemy snake head pointing up.
+        // Enemy hero head pointing up.
 
     result[LL("ENEMY_HEAD_UP")] = LL('˄');
 
-        // Enemy snake is dead.
+        // Enemy hero is dead.
 
     result[LL("ENEMY_HEAD_DEAD")] = LL('☺');
 
-        // Enemy snake head under influence Fury pill/Devils mask.
+        // Enemy hero head under influence Fury pill/Devils mask.
 
     result[LL("ENEMY_HEAD_EVIL")] = LL('♣');
 
-        // Enemy snake head under influence Flying pill/Angels wings.
+        // Enemy hero head under influence Flying pill/Angels wings.
 
     result[LL("ENEMY_HEAD_FLY")] = LL('♦');
 
-        // Enemy snake head when snake is inactive.
+        // Enemy hero head when hero is inactive.
 
     result[LL("ENEMY_HEAD_SLEEP")] = LL('ø');
 
-        // Body of enemy snake is directed horizontally.
+        // Body of enemy hero is directed horizontally.
 
     result[LL("ENEMY_BODY_HORIZONTAL")] = LL('─');
 
-        // Body of enemy snake is directed vertically.
+        // Body of enemy hero is directed vertically.
 
     result[LL("ENEMY_BODY_VERTICAL")] = LL('│');
 
-        // Turning enemy snake body from left to down.
+        // Turning enemy hero body from left to down.
 
     result[LL("ENEMY_BODY_LEFT_DOWN")] = LL('┐');
 
-        // Turning enemy snake body from left to up.
+        // Turning enemy hero body from left to up.
 
     result[LL("ENEMY_BODY_LEFT_UP")] = LL('┘');
 
-        // Turning enemy snake body from right to down.
+        // Turning enemy hero body from right to down.
 
     result[LL("ENEMY_BODY_RIGHT_DOWN")] = LL('┌');
 
-        // Turning enemy snake body from left to up.
+        // Turning enemy hero body from left to up.
 
     result[LL("ENEMY_BODY_RIGHT_UP")] = LL('└');
 
-        // Enemy snake tail (end) pointing down.
+        // Enemy hero tail (end) pointing down.
 
     result[LL("ENEMY_TAIL_END_DOWN")] = LL('¤');
 
-        // Enemy snake tail (end) pointing left.
+        // Enemy hero tail (end) pointing left.
 
     result[LL("ENEMY_TAIL_END_LEFT")] = LL('×');
 
-        // Enemy snake tail (end) pointing up.
+        // Enemy hero tail (end) pointing up.
 
     result[LL("ENEMY_TAIL_END_UP")] = LL('æ');
 
-        // Enemy snake tail (end) pointing right.
+        // Enemy hero tail (end) pointing right.
 
     result[LL("ENEMY_TAIL_END_RIGHT")] = LL('ö');
 
-        // Enemy snake tail (end) when snake is inactive.
+        // Enemy hero tail (end) when hero is inactive.
 
     result[LL("ENEMY_TAIL_INACTIVE")] = LL('*');
 
