@@ -70,11 +70,12 @@ ElementMap Element::initialiseElements() {
 
     result[LL("EXPLOSION")] = LL('Ѡ');
 
-        // Ice, having driven onto which hero will begin to drift.
-        // During a skid, hero will repeat the old commands for several
-        // ticks in a row, ignoring the current commands.
+        // Oil leak, hitting which the hero partially loses control.
+        // During the passage, the field of view is limited and the
+        // hero will repeat the old commands for several ticks in a
+        // row, ignoring the current commands.
 
-    result[LL("ICE")] = LL('#');
+    result[LL("OIL")] = LL('#');
 
         // The trees hide heroes which can continue to shoot at the
         // same time. The fired shells are also not visible under the
