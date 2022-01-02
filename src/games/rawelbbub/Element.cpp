@@ -58,7 +58,7 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // An empty space where a tank can move.
+        // An empty space where hero can move.
 
     result[LL("NONE")] = LL(' ');
 
@@ -66,25 +66,25 @@ ElementMap Element::initialiseElements() {
 
     result[LL("BATTLE_WALL")] = LL('☼');
 
-        // A destroyed enemy’s tank. A new appears just in a second.
+        // A destroyed hero. A new appears just in a second.
 
     result[LL("BANG")] = LL('Ѡ');
 
-        // Ice, having driven onto which the tank will begin to drift.
-        // During a skid, the tank will repeat the old commands for
-        // several ticks in a row, ignoring the current commands.
+        // Ice, having driven onto which hero will begin to drift.
+        // During a skid, hero will repeat the old commands for several
+        // ticks in a row, ignoring the current commands.
 
     result[LL("ICE")] = LL('#');
 
-        // The trees hide tanks which can continue to shoot at the same
-        // time. The fired shells are also not visible under the trees.
-        // Only prizes can be seen from behind the trees.
+        // The trees hide heroes which can continue to shoot at the
+        // same time. The fired shells are also not visible under the
+        // trees. Only prizes can be seen from behind the trees.
 
     result[LL("TREE")] = LL('%');
 
         // The river does not allow to pass through itself without the
         // PRIZE_WALKING_ON_WATER prize, but the shells fly freely
-        // through the water. A tank stuck in the middle of the water,
+        // through the water. Hero stuck in the middle of the water,
         // after canceling the PRIZE_WALKING_ON_WATER prize, can move 1
         // cell in the water only every N ticks.
 
@@ -174,60 +174,60 @@ ElementMap Element::initialiseElements() {
 
     result[LL("BULLET")] = LL('•');
 
-        // Your tank is pointing up.
+        // Your hero is pointing up.
 
-    result[LL("TANK_UP")] = LL('▲');
+    result[LL("HERO_UP")] = LL('▲');
 
-        // Your tank is pointing right.
+        // Your hero is pointing right.
 
-    result[LL("TANK_RIGHT")] = LL('►');
+    result[LL("HERO_RIGHT")] = LL('►');
 
-        // Your tank is pointing down.
+        // Your hero is pointing down.
 
-    result[LL("TANK_DOWN")] = LL('▼');
+    result[LL("HERO_DOWN")] = LL('▼');
 
-        // Your tank is pointing left.
+        // Your hero is pointing left.
 
-    result[LL("TANK_LEFT")] = LL('◄');
+    result[LL("HERO_LEFT")] = LL('◄');
 
-        // Enemy tank is pointing up.
+        // Enemy hero is pointing up.
 
-    result[LL("OTHER_TANK_UP")] = LL('˄');
+    result[LL("OTHER_HERO_UP")] = LL('˄');
 
-        // Enemy tank is pointing right.
+        // Enemy hero is pointing right.
 
-    result[LL("OTHER_TANK_RIGHT")] = LL('˃');
+    result[LL("OTHER_HERO_RIGHT")] = LL('˃');
 
-        // Enemy tank is pointing down.
+        // Enemy hero is pointing down.
 
-    result[LL("OTHER_TANK_DOWN")] = LL('˅');
+    result[LL("OTHER_HERO_DOWN")] = LL('˅');
 
-        // Enemy tank is pointing left.
+        // Enemy hero is pointing left.
 
-    result[LL("OTHER_TANK_LEFT")] = LL('˂');
+    result[LL("OTHER_HERO_LEFT")] = LL('˂');
 
-        // AI-tank is pointing up.
+        // AI is pointing up.
 
-    result[LL("AI_TANK_UP")] = LL('?');
+    result[LL("AI_UP")] = LL('?');
 
-        // AI-tank is pointing right.
+        // AI is pointing right.
 
-    result[LL("AI_TANK_RIGHT")] = LL('»');
+    result[LL("AI_RIGHT")] = LL('»');
 
-        // AI-tank is pointing down.
+        // AI is pointing down.
 
-    result[LL("AI_TANK_DOWN")] = LL('¿');
+    result[LL("AI_DOWN")] = LL('¿');
 
-        // AI-tank is pointing left.
+        // AI is pointing left.
 
-    result[LL("AI_TANK_LEFT")] = LL('«');
+    result[LL("AI_LEFT")] = LL('«');
 
-        // AI-tank can also be a prize, then it is highlighted by this
+        // AI can also be a prize, then it is highlighted by this
         // sprite every few ticks.
 
-    result[LL("AI_TANK_PRIZE")] = LL('◘');
+    result[LL("AI_PRIZE")] = LL('◘');
 
-        // The dropped prize after the destruction of the prize tank
+        // The dropped prize after the destruction of the prize AI
         // flickers on the field every even tick of the game with this
         // sprite.
 
