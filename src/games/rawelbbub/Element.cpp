@@ -60,11 +60,11 @@ ElementMap Element::initialiseElements() {
 
         // An empty space where hero can move.
 
-    result[LL("NONE")] = LL(' ');
+    result[LL("WATER")] = LL(' ');
 
-        // The undestroyable wall.
+        // Underwater reefs. They cannot be destroyed.
 
-    result[LL("BATTLE_WALL")] = LL('☼');
+    result[LL("REEFS")] = LL('☼');
 
         // A destroyed hero. A new appears just in a second.
 
@@ -248,7 +248,7 @@ ElementMap Element::initialiseElements() {
     result[LL("PRIZE_WALKING_ON_WATER")] = LL('3');
 
         // A prize that allows the hero to temporarily see all enemies
-        // under the trees.
+        // under the trees and their bullets.
 
     result[LL("PRIZE_VISIBILITY")] = LL('4');
 
