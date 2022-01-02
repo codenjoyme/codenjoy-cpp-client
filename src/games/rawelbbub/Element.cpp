@@ -66,9 +66,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("REEFS")] = LL('☼');
 
-        // A destroyed hero. A new appears just in a second.
+        // Explosion site. It disappears in a second.
 
-    result[LL("BANG")] = LL('Ѡ');
+    result[LL("EXPLOSION")] = LL('Ѡ');
 
         // Ice, having driven onto which hero will begin to drift.
         // During a skid, hero will repeat the old commands for several
