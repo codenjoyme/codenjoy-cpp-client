@@ -62,7 +62,8 @@ ElementMap Element::initialiseElements() {
 
     result[LL("WATER")] = LL(' ');
 
-        // Underwater reefs. They cannot be destroyed.
+        // Underwater reefs. They cannot be destroyed without prize
+        // PRIZE_BREAKING_BAD.
 
     result[LL("REEFS")] = LL('☼');
 
@@ -91,85 +92,85 @@ ElementMap Element::initialiseElements() {
 
     result[LL("FISHNET")] = LL('~');
 
-        // A wall that hasn't been shot yet. It takes 3 shots to
+        // An iceberg that hasn't been shot yet. It takes 3 shots to
         // completely destroy.
 
-    result[LL("WALL")] = LL('╬');
+    result[LL("ICEBERG_HUGE")] = LL('╬');
 
-        // Partially destroyed wall. For complete destruction, 2 shot
+        // Partially destroyed iceberg. For complete destruction, 2
+        // shot is required.
+
+    result[LL("ICEBERG_MEDIUM_DOWN")] = LL('╩');
+
+        // Partially destroyed iceberg. For complete destruction, 2
+        // shot is required.
+
+    result[LL("ICEBERG_MEDIUM_UP")] = LL('╦');
+
+        // Partially destroyed iceberg. For complete destruction, 2
+        // shot is required.
+
+    result[LL("ICEBERG_MEDIUM_LEFT")] = LL('╠');
+
+        // Partially destroyed iceberg. For complete destruction, 2
+        // shot is required.
+
+    result[LL("ICEBERG_MEDIUM_RIGHT")] = LL('╣');
+
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_DOWN")] = LL('╩');
+    result[LL("ICEBERG_SMALL_DOWN_DOWN")] = LL('╨');
 
-        // Partially destroyed wall. For complete destruction, 2 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_UP")] = LL('╦');
+    result[LL("ICEBERG_SMALL_UP_UP")] = LL('╥');
 
-        // Partially destroyed wall. For complete destruction, 2 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_LEFT")] = LL('╠');
+    result[LL("ICEBERG_SMALL_LEFT_LEFT")] = LL('╞');
 
-        // Partially destroyed wall. For complete destruction, 2 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_RIGHT")] = LL('╣');
+    result[LL("ICEBERG_SMALL_RIGHT_RIGHT")] = LL('╡');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_DOWN_TWICE")] = LL('╨');
+    result[LL("ICEBERG_SMALL_LEFT_RIGHT")] = LL('│');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_UP_TWICE")] = LL('╥');
+    result[LL("ICEBERG_SMALL_UP_DOWN")] = LL('─');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_LEFT_TWICE")] = LL('╞');
+    result[LL("ICEBERG_SMALL_UP_LEFT")] = LL('┌');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_RIGHT_TWICE")] = LL('╡');
+    result[LL("ICEBERG_SMALL_UP_RIGHT")] = LL('┐');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_LEFT_RIGHT")] = LL('│');
+    result[LL("ICEBERG_SMALL_DOWN_LEFT")] = LL('└');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
+        // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
 
-    result[LL("WALL_DESTROYED_UP_DOWN")] = LL('─');
+    result[LL("ICEBERG_SMALL_DOWN_RIGHT")] = LL('┘');
 
-        // Partially destroyed wall. For complete destruction, 1 shot
-        // is required.
+        // Completely destroyed iceberg. No different from WATER. A new
+        // one will appear at this place soon.
 
-    result[LL("WALL_DESTROYED_UP_LEFT")] = LL('┌');
-
-        // Partially destroyed wall. For complete destruction, 1 shot
-        // is required.
-
-    result[LL("WALL_DESTROYED_RIGHT_UP")] = LL('┐');
-
-        // Partially destroyed wall. For complete destruction, 1 shot
-        // is required.
-
-    result[LL("WALL_DESTROYED_DOWN_LEFT")] = LL('└');
-
-        // Partially destroyed wall. For complete destruction, 1 shot
-        // is required.
-
-    result[LL("WALL_DESTROYED_DOWN_RIGHT")] = LL('┘');
-
-        // Partially destroyed wall. For complete destruction, 2 shot
-        // is required.
-
-    result[LL("WALL_DESTROYED")] = LL(' ');
+    result[LL("ICEBERG_DESTROYED")] = LL(' ');
 
         // Completely destroyed wall. Wall will recover over time.
 
@@ -238,11 +239,11 @@ ElementMap Element::initialiseElements() {
 
     result[LL("PRIZE_IMMORTALITY")] = LL('1');
 
-        // A prize that allows you to temporarily destroy any walls
-        // with 1 shot, even indestructible ones (but not the border of
-        // the field).
+        // A prize that allows you to temporarily destroy any icebergs
+        // and underwater reefs (but not the border of the field) with
+        // 1 shot.
 
-    result[LL("PRIZE_BREAKING_WALLS")] = LL('2');
+    result[LL("PRIZE_BREAKING_BAD")] = LL('2');
 
         // A prize that allows the hero to temporarily walk on fishnet.
 
