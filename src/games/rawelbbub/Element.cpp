@@ -58,7 +58,8 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // An empty space where hero can move.
+        // An empty space where hero can move. If there was an iceberg
+        // in this place before, it can grow again
 
     result[LL("WATER")] = LL(' ');
 
@@ -100,7 +101,12 @@ ElementMap Element::initialiseElements() {
         // Partially destroyed iceberg. For complete destruction, 2
         // shot is required.
 
-    result[LL("ICEBERG_MEDIUM_DOWN")] = LL('╩');
+    result[LL("ICEBERG_MEDIUM_LEFT")] = LL('╠');
+
+        // Partially destroyed iceberg. For complete destruction, 2
+        // shot is required.
+
+    result[LL("ICEBERG_MEDIUM_RIGHT")] = LL('╣');
 
         // Partially destroyed iceberg. For complete destruction, 2
         // shot is required.
@@ -110,22 +116,7 @@ ElementMap Element::initialiseElements() {
         // Partially destroyed iceberg. For complete destruction, 2
         // shot is required.
 
-    result[LL("ICEBERG_MEDIUM_LEFT")] = LL('╠');
-
-        // Partially destroyed iceberg. For complete destruction, 2
-        // shot is required.
-
-    result[LL("ICEBERG_MEDIUM_RIGHT")] = LL('╣');
-
-        // Almost destroyed iceberg. For complete destruction, 1 shot
-        // is required.
-
-    result[LL("ICEBERG_SMALL_DOWN_DOWN")] = LL('╨');
-
-        // Almost destroyed iceberg. For complete destruction, 1 shot
-        // is required.
-
-    result[LL("ICEBERG_SMALL_UP_UP")] = LL('╥');
+    result[LL("ICEBERG_MEDIUM_DOWN")] = LL('╩');
 
         // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
@@ -136,6 +127,16 @@ ElementMap Element::initialiseElements() {
         // is required.
 
     result[LL("ICEBERG_SMALL_RIGHT_RIGHT")] = LL('╡');
+
+        // Almost destroyed iceberg. For complete destruction, 1 shot
+        // is required.
+
+    result[LL("ICEBERG_SMALL_UP_UP")] = LL('╥');
+
+        // Almost destroyed iceberg. For complete destruction, 1 shot
+        // is required.
+
+    result[LL("ICEBERG_SMALL_DOWN_DOWN")] = LL('╨');
 
         // Almost destroyed iceberg. For complete destruction, 1 shot
         // is required.
@@ -167,65 +168,72 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ICEBERG_SMALL_DOWN_RIGHT")] = LL('┘');
 
-        // Completely destroyed iceberg. No different from WATER. A new
-        // one will appear at this place soon.
-
-    result[LL("ICEBERG_DESTROYED")] = LL(' ');
-
         // Torpedo - is a self-propelled underwater missile designed to
         // be fired from a submarine and to explode on reaching a
         // target. The target can be an iceberg, another submarine and
-        // other elements under water.
+        // other elements under water. This torpedo moves to the left.
 
-    result[LL("TORPEDO")] = LL('•');
+    result[LL("TORPEDO_LEFT")] = LL('•');
 
-        // Your hero is pointing up.
+        // This torpedo moves to the right.
 
-    result[LL("HERO_UP")] = LL('▲');
+    result[LL("TORPEDO_RIGHT")] = LL('¤');
 
-        // Your hero is pointing right.
+        // This torpedo moves to the up.
 
-    result[LL("HERO_RIGHT")] = LL('►');
+    result[LL("TORPEDO_UP")] = LL('ø');
 
-        // Your hero is pointing down.
+        // This torpedo moves to the down.
 
-    result[LL("HERO_DOWN")] = LL('▼');
+    result[LL("TORPEDO_DOWN")] = LL('×');
 
         // Your hero is pointing left.
 
     result[LL("HERO_LEFT")] = LL('◄');
 
-        // Enemy hero is pointing up.
+        // Your hero is pointing right.
 
-    result[LL("OTHER_HERO_UP")] = LL('˄');
+    result[LL("HERO_RIGHT")] = LL('►');
 
-        // Enemy hero is pointing right.
+        // Your hero is pointing up.
 
-    result[LL("OTHER_HERO_RIGHT")] = LL('˃');
+    result[LL("HERO_UP")] = LL('▲');
 
-        // Enemy hero is pointing down.
+        // Your hero is pointing down.
 
-    result[LL("OTHER_HERO_DOWN")] = LL('˅');
+    result[LL("HERO_DOWN")] = LL('▼');
 
         // Enemy hero is pointing left.
 
     result[LL("OTHER_HERO_LEFT")] = LL('˂');
 
-        // AI is pointing up.
+        // Enemy hero is pointing right.
 
-    result[LL("AI_UP")] = LL('?');
+    result[LL("OTHER_HERO_RIGHT")] = LL('˃');
+
+        // Enemy hero is pointing up.
+
+    result[LL("OTHER_HERO_UP")] = LL('˄');
+
+        // Enemy hero is pointing down.
+
+    result[LL("OTHER_HERO_DOWN")] = LL('˅');
+
+        // AI is pointing left.
+
+    result[LL("AI_LEFT")] = LL('«');
 
         // AI is pointing right.
 
     result[LL("AI_RIGHT")] = LL('»');
 
+        // AI is pointing up.
+
+    result[LL("AI_UP")] = LL('?');
+
         // AI is pointing down.
 
     result[LL("AI_DOWN")] = LL('¿');
-
-        // AI is pointing left.
-
-    result[LL("AI_LEFT")] = LL('«');
 
         // AI can also be a prize, then it is highlighted by this
         // sprite every few ticks.
