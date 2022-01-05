@@ -235,10 +235,21 @@ ElementMap Element::initialiseElements() {
 
     result[LL("AI_DOWN")] = LL('¿');
 
-        // AI can also be a prize, then it is highlighted by this
-        // sprite every few ticks.
+        // AI with prize is pointing left.
 
-    result[LL("AI_PRIZE")] = LL('◘');
+    result[LL("AI_PRIZE_LEFT")] = LL('{');
+
+        // AI with prize is pointing right.
+
+    result[LL("AI_PRIZE_RIGHT")] = LL('}');
+
+        // AI with prize is pointing up.
+
+    result[LL("AI_PRIZE_UP")] = LL('î');
+
+        // AI with prize is pointing down.
+
+    result[LL("AI_PRIZE_DOWN")] = LL('w');
 
         // The dropped prize after the destruction of the prize AI
         // flickers on the field every even tick of the game with this
