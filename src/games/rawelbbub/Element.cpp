@@ -251,6 +251,46 @@ ElementMap Element::initialiseElements() {
 
     result[LL("AI_PRIZE_DOWN")] = LL('w');
 
+        // This torpedo moves to the left.
+
+    result[LL("TORPEDO_SIDE_LEFT")] = LL('t');
+
+        // This torpedo moves to the right.
+
+    result[LL("TORPEDO_SIDE_RIGHT")] = LL('T');
+
+        // Your hero is pointing left.
+
+    result[LL("HERO_SIDE_LEFT")] = LL('h');
+
+        // Your hero is pointing right.
+
+    result[LL("HERO_SIDE_RIGHT")] = LL('H');
+
+        // Enemy hero is pointing left.
+
+    result[LL("OTHER_HERO_SIDE_LEFT")] = LL('o');
+
+        // Enemy hero is pointing right.
+
+    result[LL("OTHER_HERO_SIDE_RIGHT")] = LL('O');
+
+        // AI is pointing left.
+
+    result[LL("AI_SIDE_LEFT")] = LL('a');
+
+        // AI is pointing right.
+
+    result[LL("AI_SIDE_RIGHT")] = LL('A');
+
+        // AI with prize is pointing left.
+
+    result[LL("AI_PRIZE_SIDE_LEFT")] = LL('p');
+
+        // AI with prize is pointing right.
+
+    result[LL("AI_PRIZE_SIDE_RIGHT")] = LL('P');
+
         // The dropped prize after the destruction of the prize AI
         // flickers on the field every even tick of the game with this
         // sprite.
