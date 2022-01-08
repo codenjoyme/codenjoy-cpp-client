@@ -45,19 +45,19 @@ CharElement* Board::valueOf(Char ch) const {
 Point Board::getHero() const {
     PointList result;
     result.splice(result.end(), findAll(new Element(LL("HERO"))));
-    result.splice(result.end(), findAll(new Element(LL("DEAD_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("HERO_DEAD"))));
     return result.front();
 }
 
 PointList Board::getOtherHeroes() const {
     PointList result;
     result.splice(result.end(), findAll(new Element(LL("OTHER_HERO"))));
-    result.splice(result.end(), findAll(new Element(LL("OTHER_DEAD_HERO"))));
+    result.splice(result.end(), findAll(new Element(LL("OTHER_HERO_DEAD"))));
     return result;
 }
 
 bool Board::isGameOver() const {
-    return board.find(Element(LL("DEAD_HERO")).getChar()) != String::npos;
+    return board.find(Element(LL("HERO_DEAD")).getChar()) != String::npos;
 }
 
 PointList Board::getBarriers() const {
