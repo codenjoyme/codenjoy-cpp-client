@@ -203,21 +203,37 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HERO_DOWN")] = LL('▼');
 
-        // Enemy hero is pointing left.
+        // Other hero is pointing left.
 
     result[LL("OTHER_HERO_LEFT")] = LL('˂');
 
-        // Enemy hero is pointing right.
+        // Other hero is pointing right.
 
     result[LL("OTHER_HERO_RIGHT")] = LL('˃');
 
-        // Enemy hero is pointing up.
+        // Other hero is pointing up.
 
     result[LL("OTHER_HERO_UP")] = LL('˄');
 
-        // Enemy hero is pointing down.
+        // Other hero is pointing down.
 
     result[LL("OTHER_HERO_DOWN")] = LL('˅');
+
+        // Enemy hero is pointing left.
+
+    result[LL("ENEMY_HERO_LEFT")] = LL('Ð');
+
+        // Enemy hero is pointing right.
+
+    result[LL("ENEMY_HERO_RIGHT")] = LL('£');
+
+        // Enemy hero is pointing up.
+
+    result[LL("ENEMY_HERO_UP")] = LL('Ô');
+
+        // Enemy hero is pointing down.
+
+    result[LL("ENEMY_HERO_DOWN")] = LL('Ç');
 
         // AI is pointing left.
 
@@ -267,13 +283,21 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HERO_SIDE_RIGHT")] = LL('H');
 
-        // Enemy hero is pointing left.
+        // Other hero is pointing left.
 
     result[LL("OTHER_HERO_SIDE_LEFT")] = LL('o');
 
-        // Enemy hero is pointing right.
+        // Other hero is pointing right.
 
     result[LL("OTHER_HERO_SIDE_RIGHT")] = LL('O');
+
+        // Enemy hero is pointing left.
+
+    result[LL("ENEMY_HERO_SIDE_LEFT")] = LL('e');
+
+        // Enemy hero is pointing right.
+
+    result[LL("ENEMY_HERO_SIDE_RIGHT")] = LL('E');
 
         // AI is pointing left.
 

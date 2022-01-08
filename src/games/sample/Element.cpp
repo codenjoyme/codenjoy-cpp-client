@@ -70,17 +70,25 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HERO")] = LL('☺');
 
-        // Heroes of other players.
-
-    result[LL("OTHER_HERO")] = LL('☻');
-
         // Your hero died. His body will disappear in the next tick.
 
     result[LL("DEAD_HERO")] = LL('X');
 
+        // Heroes of other players.
+
+    result[LL("OTHER_HERO")] = LL('☻');
+
         // Another player's hero died.
 
     result[LL("OTHER_DEAD_HERO")] = LL('Y');
+
+        // Heroes of other players in other team.
+
+    result[LL("ENEMY_HERO")] = LL('♥');
+
+        // Player's Hero from the other team who died.
+
+    result[LL("ENEMY_DEAD_HERO")] = LL('Z');
 
         // Gold. It must be picked up.
 
