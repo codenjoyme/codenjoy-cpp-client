@@ -95,7 +95,7 @@ ElementMap Element::initialiseElements() {
         // disappear on next move. If it's you did it - you'll get
         // score points. Perhaps a prize will appear.
 
-    result[LL("OPENING_TREASURE_BOX")] = LL('H');
+    result[LL("TREASURE_BOX_OPENING")] = LL('H');
 
         // This guys runs over the board randomly and gets in the way
         // all the time. If it will touch Molly - she will die. You'd
@@ -106,7 +106,7 @@ ElementMap Element::initialiseElements() {
 
         // This is ghost corpse.
 
-    result[LL("DEAD_GHOST")] = LL('x');
+    result[LL("GHOST_DEAD")] = LL('x');
 
         // Temporarily increase potion radius blast. Applicable only to
         // new potions.
@@ -150,13 +150,13 @@ ElementMap Element::initialiseElements() {
 
         // This is if your Molly is sitting on own potion.
 
-    result[LL("POTION_HERO")] = LL('☻');
+    result[LL("HERO_POTION")] = LL('☻');
 
         // Oops, your Molly is dead (don't worry, she will appear
         // somewhere in next move). You're getting penalty points for
         // each death.
 
-    result[LL("DEAD_HERO")] = LL('Ѡ');
+    result[LL("HERO_DEAD")] = LL('Ѡ');
 
         // This is what other heroes looks like.
 
@@ -164,12 +164,12 @@ ElementMap Element::initialiseElements() {
 
         // This is if other hero is sitting on own potion.
 
-    result[LL("OTHER_POTION_HERO")] = LL('♠');
+    result[LL("OTHER_HERO_POTION")] = LL('♠');
 
         // Other hero corpse (it will disappear shortly, right on the
         // next move). If you've done it you'll get score points.
 
-    result[LL("OTHER_DEAD_HERO")] = LL('♣');
+    result[LL("OTHER_HERO_DEAD")] = LL('♣');
 
         // This is what enemy heroes looks like.
 
@@ -177,12 +177,12 @@ ElementMap Element::initialiseElements() {
 
         // This is if enemy hero is sitting on own potion.
 
-    result[LL("ENEMY_POTION_HERO")] = LL('Ö');
+    result[LL("ENEMY_HERO_POTION")] = LL('Ö');
 
         // Enemy hero corpse (it will disappear shortly, right on the
         // next move). If you've done it you'll get score points.
 
-    result[LL("ENEMY_DEAD_HERO")] = LL('ø');
+    result[LL("ENEMY_HERO_DEAD")] = LL('ø');
 
     return result;
 };
