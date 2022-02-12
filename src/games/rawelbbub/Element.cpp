@@ -267,51 +267,51 @@ ElementMap Element::initialiseElements() {
 
     result[LL("AI_PRIZE_DOWN")] = LL('w');
 
-        // This torpedo moves to the left.
+        // Turn based mode. This torpedo moves to the left.
 
     result[LL("TORPEDO_SIDE_LEFT")] = LL('t');
 
-        // This torpedo moves to the right.
+        // Turn based mode. This torpedo moves to the right.
 
     result[LL("TORPEDO_SIDE_RIGHT")] = LL('T');
 
-        // Your hero is pointing left.
+        // Turn based mode. Your hero is pointing left.
 
     result[LL("HERO_SIDE_LEFT")] = LL('h');
 
-        // Your hero is pointing right.
+        // Turn based mode. Your hero is pointing right.
 
     result[LL("HERO_SIDE_RIGHT")] = LL('H');
 
-        // Other hero is pointing left.
+        // Turn based mode. Other hero is pointing left.
 
     result[LL("OTHER_HERO_SIDE_LEFT")] = LL('o');
 
-        // Other hero is pointing right.
+        // Turn based mode. Other hero is pointing right.
 
     result[LL("OTHER_HERO_SIDE_RIGHT")] = LL('O');
 
-        // Enemy hero is pointing left.
+        // Turn based mode. Enemy hero is pointing left.
 
     result[LL("ENEMY_HERO_SIDE_LEFT")] = LL('e');
 
-        // Enemy hero is pointing right.
+        // Turn based mode. Enemy hero is pointing right.
 
     result[LL("ENEMY_HERO_SIDE_RIGHT")] = LL('E');
 
-        // AI is pointing left.
+        // Turn based mode. AI is pointing left.
 
     result[LL("AI_SIDE_LEFT")] = LL('a');
 
-        // AI is pointing right.
+        // Turn based mode. AI is pointing right.
 
     result[LL("AI_SIDE_RIGHT")] = LL('A');
 
-        // AI with prize is pointing left.
+        // Turn based mode. AI with prize is pointing left.
 
     result[LL("AI_PRIZE_SIDE_LEFT")] = LL('p');
 
-        // AI with prize is pointing right.
+        // Turn based mode. AI with prize is pointing right.
 
     result[LL("AI_PRIZE_SIDE_RIGHT")] = LL('P');
 
