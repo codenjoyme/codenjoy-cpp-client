@@ -58,11 +58,11 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // .
+        // Поле.
 
     result[LL("SQUARE")] = LL('.');
 
-        // .
+        // Препятствие для фигур.
 
     result[LL("BARRIER")] = LL(' ');
 
@@ -162,7 +162,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("BLUE_PAWN")] = LL('z');
 
-        // Системный спрайт - изображение шахматной доски.
+        // Изображение шахматной доски (фон).
 
     result[LL("BACKGROUND")] = LL('-');
 
