@@ -374,6 +374,10 @@ ElementMap Element::initialiseElements() {
 
     result[LL("MASK_POTION")] = LL('m');
 
+        // Ammo clip - additional ammo for hero's gun
+
+    result[LL("AMMO_CLIP")] = LL('Ѧ');
+
     return result;
 };
 
