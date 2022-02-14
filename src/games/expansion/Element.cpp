@@ -58,61 +58,119 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
+        // Empty space (at layer 2) where player can go.
+
     result[LL("EMPTY")] = LL('-');
+
+        // Empty space (at layer 1) where player can go.
 
     result[LL("FLOOR")] = LL('.');
 
+        // Wall.
+
     result[LL("ANGLE_IN_LEFT")] = LL('╔');
+
+        // Wall.
 
     result[LL("WALL_FRONT")] = LL('═');
 
+        // Wall.
+
     result[LL("ANGLE_IN_RIGHT")] = LL('┐');
+
+        // Wall.
 
     result[LL("WALL_RIGHT")] = LL('│');
 
+        // Wall.
+
     result[LL("ANGLE_BACK_RIGHT")] = LL('┘');
+
+        // Wall.
 
     result[LL("WALL_BACK")] = LL('─');
 
+        // Wall.
+
     result[LL("ANGLE_BACK_LEFT")] = LL('└');
+
+        // Wall.
 
     result[LL("WALL_LEFT")] = LL('║');
 
+        // Wall.
+
     result[LL("WALL_BACK_ANGLE_LEFT")] = LL('┌');
+
+        // Wall.
 
     result[LL("WALL_BACK_ANGLE_RIGHT")] = LL('╗');
 
+        // Wall.
+
     result[LL("ANGLE_OUT_RIGHT")] = LL('╝');
+
+        // Wall.
 
     result[LL("ANGLE_OUT_LEFT")] = LL('╚');
 
+        // Wall.
+
     result[LL("SPACE")] = LL(' ');
+
+        // Forces of player 1.
 
     result[LL("FORCE1")] = LL('♥');
 
+        // Forces of player 2.
+
     result[LL("FORCE2")] = LL('♦');
+
+        // Forces of player 3.
 
     result[LL("FORCE3")] = LL('♣');
 
+        // Forces of player 4.
+
     result[LL("FORCE4")] = LL('♠');
+
+        // Exit.
 
     result[LL("EXIT")] = LL('E');
 
+        // Hole.
+
     result[LL("HOLE")] = LL('O');
+
+        // Unpassable break.
 
     result[LL("BREAK")] = LL('B');
 
+        // Gold.
+
     result[LL("GOLD")] = LL('$');
+
+        // Base of player 1.
 
     result[LL("BASE1")] = LL('1');
 
+        // Base of player 2.
+
     result[LL("BASE2")] = LL('2');
+
+        // Base of player 3.
 
     result[LL("BASE3")] = LL('3');
 
+        // Base of player 4.
+
     result[LL("BASE4")] = LL('4');
 
+        // Fog of war system layer.
+
     result[LL("FOG")] = LL('F');
+
+        // Background system layer.
 
     result[LL("BACKGROUND")] = LL('G');
 
