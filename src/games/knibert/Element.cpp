@@ -92,43 +92,43 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HEAD_UP")] = LL('▲');
 
-        // Horizontal part of the body.
+        // Horizontal middle part of the body.
 
     result[LL("TAIL_HORIZONTAL")] = LL('═');
 
-        // Vertical part of the body.
+        // Vertical middle part of the body.
 
     result[LL("TAIL_VERTICAL")] = LL('║');
 
-        // Turning the hero body from left to down.
+        // Turning the hero body (middle) from left to down.
 
     result[LL("TAIL_LEFT_DOWN")] = LL('╗');
 
-        // Turning the hero body from left to up.
+        // Turning the hero body (middle) from left to up.
 
     result[LL("TAIL_LEFT_UP")] = LL('╝');
 
-        // Turning the hero body from right to down.
+        // Turning the hero body (middle) from right to down.
 
     result[LL("TAIL_RIGHT_DOWN")] = LL('╔');
 
-        // Turning the hero body from right to up.
+        // Turning the hero body (middle) from right to up.
 
     result[LL("TAIL_RIGHT_UP")] = LL('╚');
 
-        // Down tail.
+        // Down tail end.
 
     result[LL("TAIL_END_DOWN")] = LL('╙');
 
-        // Left tail.
+        // Left tail end.
 
     result[LL("TAIL_END_LEFT")] = LL('╘');
 
-        // Up tail.
+        // Up tail end.
 
     result[LL("TAIL_END_UP")] = LL('╓');
 
-        // Right tail.
+        // Right tail end.
 
     result[LL("TAIL_END_RIGHT")] = LL('╕');
 
