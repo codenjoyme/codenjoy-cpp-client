@@ -70,10 +70,6 @@ ElementMap Element::initialiseElements() {
 
     result[LL("START_FLOOR")] = LL('#');
 
-        // .
-
-    result[LL("OTHER")] = LL('?');
-
         // Apple.
 
     result[LL("APPLE")] = LL('○');
