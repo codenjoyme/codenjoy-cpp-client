@@ -58,7 +58,7 @@ bool Element::operator==(const Element& el) const {
 ElementMap Element::initialiseElements() {
     ElementMap result;
 
-        // Emty space.
+        // Empty space.
 
     result[LL("NONE")] = LL(' ');
 
