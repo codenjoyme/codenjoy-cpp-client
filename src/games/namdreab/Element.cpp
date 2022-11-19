@@ -78,9 +78,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ACORN")] = LL('●');
 
-        // Flying pill/Angel's wings.
+        // Death cap/Angel's wings.
 
-    result[LL("FLYING_PILL")] = LL('©');
+    result[LL("DEATH_CAP")] = LL('©');
 
         // Fury pill/Devil's mask.
 
@@ -114,7 +114,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HEAD_EVIL")] = LL('♥');
 
-        // Your hero head under influence Flying pill/Angels wings.
+        // Your hero head under influence Death cap/Angels wings.
 
     result[LL("HEAD_FLY")] = LL('♠');
 
@@ -190,7 +190,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ENEMY_HEAD_EVIL")] = LL('♣');
 
-        // Enemy hero head under influence Flying pill/Angels wings.
+        // Enemy hero head under influence Death cap/Angels wings.
 
     result[LL("ENEMY_HEAD_FLY")] = LL('♦');
 
