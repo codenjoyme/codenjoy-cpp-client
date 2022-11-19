@@ -68,7 +68,7 @@ ElementMap Element::initialiseElements() {
 
         // Respawn point from which the hero starts its movement.
 
-    result[LL("START_FLOOR")] = LL('#');
+    result[LL("START_SPOT")] = LL('#');
 
         // Apple.
 
