@@ -70,9 +70,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("START_SPOT")] = LL('#');
 
-        // Apple.
+        // Blueberry.
 
-    result[LL("APPLE")] = LL('○');
+    result[LL("BLUEBERRY")] = LL('○');
 
         // Stone.
 
