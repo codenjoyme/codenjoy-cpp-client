@@ -74,9 +74,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("BLUEBERRY")] = LL('○');
 
-        // Stone.
+        // Acorn.
 
-    result[LL("STONE")] = LL('●');
+    result[LL("ACORN")] = LL('●');
 
         // Flying pill/Angel's wings.
 
