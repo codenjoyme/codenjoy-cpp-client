@@ -62,9 +62,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("NONE")] = LL(' ');
 
-        // Impenetrable wall.
+        // Impenetrable rock.
 
-    result[LL("WALL")] = LL('☼');
+    result[LL("ROCK")] = LL('☼');
 
         // Respawn point from which the hero starts its movement.
 
