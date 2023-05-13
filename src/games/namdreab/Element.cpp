@@ -62,7 +62,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("NONE")] = LL(' ');
 
-        // Impenetrable rock.
+        // Impassable obstacle.
 
     result[LL("ROCK")] = LL('☼');
 
@@ -92,157 +92,157 @@ ElementMap Element::initialiseElements() {
 
     result[LL("STRAWBERRY")] = LL('$');
 
-        // Your hero head pointing down.
+        // Your hero is pointing down.
 
-    result[LL("HEAD_DOWN")] = LL('▼');
+    result[LL("HERO_DOWN")] = LL('▼');
 
-        // Your hero head pointing left.
+        // Your hero is pointing left.
 
-    result[LL("HEAD_LEFT")] = LL('◄');
+    result[LL("HERO_LEFT")] = LL('◄');
 
-        // Your hero head pointing right.
+        // Your hero is pointing right.
 
-    result[LL("HEAD_RIGHT")] = LL('►');
+    result[LL("HERO_RIGHT")] = LL('►');
 
-        // Your hero head pointing up.
+        // Your hero is pointing up.
 
-    result[LL("HEAD_UP")] = LL('▲');
+    result[LL("HERO_UP")] = LL('▲');
 
         // Your hero is dead.
 
-    result[LL("HEAD_DEAD")] = LL('☻');
+    result[LL("HERO_DEAD")] = LL('☻');
 
-        // Your hero head under influence fly agaric.
+        // Your hero is influenced by Fly agaric.
 
-    result[LL("HEAD_EVIL")] = LL('♥');
+    result[LL("HERO_EVIL")] = LL('♥');
 
-        // Your hero head under influence death cap.
+        // Your hero is influenced by Death cap.
 
-    result[LL("HEAD_FLY")] = LL('♠');
+    result[LL("HERO_FLY")] = LL('♠');
 
-        // Your hero head when hero is inactive.
+        // Your hero when inactive.
 
-    result[LL("HEAD_SLEEP")] = LL('&');
+    result[LL("HERO_SLEEP")] = LL('&');
 
-        // Body of your hero is directed horizontally.
+        // Your hero's beard is directed horizontally.
 
-    result[LL("BODY_HORIZONTAL")] = LL('═');
+    result[LL("HERO_BEARD_HORIZONTAL")] = LL('═');
 
-        // Body of your hero is directed vertically.
+        // Your hero's beard is directed vertically.
 
-    result[LL("BODY_VERTICAL")] = LL('║');
+    result[LL("HERO_BEARD_VERTICAL")] = LL('║');
 
-        // Turning your hero body from left to down.
+        // Turning your hero's beard from left to down.
 
-    result[LL("BODY_LEFT_DOWN")] = LL('╗');
+    result[LL("HERO_BEARD_LEFT_DOWN")] = LL('╗');
 
-        // Turning your hero body from left to up.
+        // Turning your hero's beard from left to up.
 
-    result[LL("BODY_LEFT_UP")] = LL('╝');
+    result[LL("HERO_BEARD_LEFT_UP")] = LL('╝');
 
-        // Turning your hero body from right to down.
+        // Turning your hero's beard from right to down.
 
-    result[LL("BODY_RIGHT_DOWN")] = LL('╔');
+    result[LL("HERO_BEARD_RIGHT_DOWN")] = LL('╔');
 
-        // Turning your hero body from left to up.
+        // Turning your hero's beard from left to up.
 
-    result[LL("BODY_RIGHT_UP")] = LL('╚');
+    result[LL("HERO_BEARD_RIGHT_UP")] = LL('╚');
 
-        // Your hero tail (end) pointing down.
+        // Tail of your hero's beard that points to the down.
 
-    result[LL("TAIL_END_DOWN")] = LL('╙');
+    result[LL("HERO_TAIL_DOWN")] = LL('╙');
 
-        // Your hero tail (end) pointing left.
+        // Tail of your hero's beard that points to the left.
 
-    result[LL("TAIL_END_LEFT")] = LL('╘');
+    result[LL("HERO_TAIL_LEFT")] = LL('╘');
 
-        // Your hero tail (end) pointing up.
+        // Tail of your hero's beard that points to the up.
 
-    result[LL("TAIL_END_UP")] = LL('╓');
+    result[LL("HERO_TAIL_UP")] = LL('╓');
 
-        // Your hero tail (end) pointing right.
+        // Tail of your hero's beard that points to the right.
 
-    result[LL("TAIL_END_RIGHT")] = LL('╕');
+    result[LL("HERO_TAIL_RIGHT")] = LL('╕');
 
-        // Your hero tail (end) when hero is inactive.
+        // Tail of your hero's beard when inactive.
 
-    result[LL("TAIL_INACTIVE")] = LL('~');
+    result[LL("HERO_TAIL_INACTIVE")] = LL('~');
 
-        // Enemy hero head pointing down.
+        // Enemy hero is pointing down.
 
-    result[LL("ENEMY_HEAD_DOWN")] = LL('˅');
+    result[LL("ENEMY_HERO_DOWN")] = LL('˅');
 
-        // Enemy hero head pointing left.
+        // Enemy hero is pointing left.
 
-    result[LL("ENEMY_HEAD_LEFT")] = LL('<');
+    result[LL("ENEMY_HERO_LEFT")] = LL('<');
 
-        // Enemy hero head pointing right.
+        // Enemy hero is pointing right.
 
-    result[LL("ENEMY_HEAD_RIGHT")] = LL('>');
+    result[LL("ENEMY_HERO_RIGHT")] = LL('>');
 
-        // Enemy hero head pointing up.
+        // Enemy hero is pointing up.
 
-    result[LL("ENEMY_HEAD_UP")] = LL('˄');
+    result[LL("ENEMY_HERO_UP")] = LL('˄');
 
         // Enemy hero is dead.
 
-    result[LL("ENEMY_HEAD_DEAD")] = LL('☺');
+    result[LL("ENEMY_HERO_DEAD")] = LL('☺');
 
-        // Enemy hero head under influence fly agaric.
+        // Enemy hero is influenced by Fly agaric.
 
-    result[LL("ENEMY_HEAD_EVIL")] = LL('♣');
+    result[LL("ENEMY_HERO_EVIL")] = LL('♣');
 
-        // Enemy hero head under influence death cap.
+        // Enemy hero is influenced by Death cap.
 
-    result[LL("ENEMY_HEAD_FLY")] = LL('♦');
+    result[LL("ENEMY_HERO_FLY")] = LL('♦');
 
-        // Enemy hero head when hero is inactive.
+        // Enemy hero when inactive.
 
-    result[LL("ENEMY_HEAD_SLEEP")] = LL('ø');
+    result[LL("ENEMY_HERO_SLEEP")] = LL('ø');
 
-        // Body of enemy hero is directed horizontally.
+        // Enemy hero's beard is directed horizontally.
 
-    result[LL("ENEMY_BODY_HORIZONTAL")] = LL('─');
+    result[LL("ENEMY_HERO_BEARD_HORIZONTAL")] = LL('─');
 
-        // Body of enemy hero is directed vertically.
+        // Enemy hero's beard is directed vertically.
 
-    result[LL("ENEMY_BODY_VERTICAL")] = LL('│');
+    result[LL("ENEMY_HERO_BEARD_VERTICAL")] = LL('│');
 
-        // Turning enemy hero body from left to down.
+        // Turning enemy hero's beard from left to down.
 
-    result[LL("ENEMY_BODY_LEFT_DOWN")] = LL('┐');
+    result[LL("ENEMY_HERO_BEARD_LEFT_DOWN")] = LL('┐');
 
-        // Turning enemy hero body from left to up.
+        // Turning enemy hero's beard from left to up.
 
-    result[LL("ENEMY_BODY_LEFT_UP")] = LL('┘');
+    result[LL("ENEMY_HERO_BEARD_LEFT_UP")] = LL('┘');
 
-        // Turning enemy hero body from right to down.
+        // Turning enemy hero's beard from right to down.
 
-    result[LL("ENEMY_BODY_RIGHT_DOWN")] = LL('┌');
+    result[LL("ENEMY_HERO_BEARD_RIGHT_DOWN")] = LL('┌');
 
-        // Turning enemy hero body from left to up.
+        // Turning enemy hero's beard from left to up.
 
-    result[LL("ENEMY_BODY_RIGHT_UP")] = LL('└');
+    result[LL("ENEMY_HERO_BEARD_RIGHT_UP")] = LL('└');
 
-        // Enemy hero tail (end) pointing down.
+        // Tail of enemy hero's beard that points to the down.
 
-    result[LL("ENEMY_TAIL_END_DOWN")] = LL('¤');
+    result[LL("ENEMY_HERO_TAIL_DOWN")] = LL('¤');
 
-        // Enemy hero tail (end) pointing left.
+        // Tail of enemy hero's beard that points to the left.
 
-    result[LL("ENEMY_TAIL_END_LEFT")] = LL('×');
+    result[LL("ENEMY_HERO_TAIL_LEFT")] = LL('×');
 
-        // Enemy hero tail (end) pointing up.
+        // Tail of enemy hero's beard that points to the up.
 
-    result[LL("ENEMY_TAIL_END_UP")] = LL('æ');
+    result[LL("ENEMY_HERO_TAIL_UP")] = LL('æ');
 
-        // Enemy hero tail (end) pointing right.
+        // Tail of enemy hero's beard that points to the right.
 
-    result[LL("ENEMY_TAIL_END_RIGHT")] = LL('ö');
+    result[LL("ENEMY_HERO_TAIL_RIGHT")] = LL('ö');
 
-        // Enemy hero tail (end) when hero is inactive.
+        // Tail of enemy hero's beard when inactive.
 
-    result[LL("ENEMY_TAIL_INACTIVE")] = LL('*');
+    result[LL("ENEMY_HERO_TAIL_INACTIVE")] = LL('*');
 
     return result;
 };
