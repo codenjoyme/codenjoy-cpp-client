@@ -78,17 +78,19 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ACORN")] = LL('●');
 
-        // Death cap/Angel's wings.
+        // Death cap. Brings the player into flight mode, which gives
+        // him the ability to avoid obstacles.
 
     result[LL("DEATH_CAP")] = LL('©');
 
-        // Fly agaric/Devil's mask.
+        // Fly agaric. Brings the player into a fury, which gives him
+        // an advantage when clashing.
 
     result[LL("FLY_AGARIC")] = LL('®');
 
-        // Gold.
+        // Strawberry.
 
-    result[LL("GOLD")] = LL('$');
+    result[LL("STRAWBERRY")] = LL('$');
 
         // Your hero head pointing down.
 
@@ -110,11 +112,11 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HEAD_DEAD")] = LL('☻');
 
-        // Your hero head under influence Fly agaric/Devils mask.
+        // Your hero head under influence fly agaric.
 
     result[LL("HEAD_EVIL")] = LL('♥');
 
-        // Your hero head under influence Death cap/Angels wings.
+        // Your hero head under influence death cap.
 
     result[LL("HEAD_FLY")] = LL('♠');
 
@@ -186,11 +188,11 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ENEMY_HEAD_DEAD")] = LL('☺');
 
-        // Enemy hero head under influence Fly agaric/Devils mask.
+        // Enemy hero head under influence fly agaric.
 
     result[LL("ENEMY_HEAD_EVIL")] = LL('♣');
 
-        // Enemy hero head under influence Death cap/Angels wings.
+        // Enemy hero head under influence death cap.
 
     result[LL("ENEMY_HEAD_FLY")] = LL('♦');
 
