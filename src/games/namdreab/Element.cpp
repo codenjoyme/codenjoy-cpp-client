@@ -82,9 +82,9 @@ ElementMap Element::initialiseElements() {
 
     result[LL("DEATH_CAP")] = LL('©');
 
-        // Fury pill/Devil's mask.
+        // Fly agaric/Devil's mask.
 
-    result[LL("FURY_PILL")] = LL('®');
+    result[LL("FLY_AGARIC")] = LL('®');
 
         // Gold.
 
@@ -110,7 +110,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("HEAD_DEAD")] = LL('☻');
 
-        // Your hero head under influence Fury pill/Devils mask.
+        // Your hero head under influence Fly agaric/Devils mask.
 
     result[LL("HEAD_EVIL")] = LL('♥');
 
@@ -186,7 +186,7 @@ ElementMap Element::initialiseElements() {
 
     result[LL("ENEMY_HEAD_DEAD")] = LL('☺');
 
-        // Enemy hero head under influence Fury pill/Devils mask.
+        // Enemy hero head under influence Fly agaric/Devils mask.
 
     result[LL("ENEMY_HEAD_EVIL")] = LL('♣');
 
